@@ -1,0 +1,17 @@
+
+State Machine - |CPU16bit|Contrlblock:b2v_inst|current_state
+Name current_state.ld3 current_state.ld2 current_state.ld1 current_state.adds3 current_state.adds2 current_state.adds1 current_state.incPC4 current_state.incPC3 current_state.incPC2 current_state.incPC1 current_state.execute current_state.reset3 current_state.reset2 current_state.reset1 
+current_state.reset1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+current_state.reset2 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+current_state.reset3 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+current_state.execute 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+current_state.incPC1 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+current_state.incPC2 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+current_state.incPC3 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+current_state.incPC4 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+current_state.adds1 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+current_state.adds2 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+current_state.adds3 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+current_state.ld1 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+current_state.ld2 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.ld3 1 0 0 0 0 0 0 0 0 0 0 0 0 1 

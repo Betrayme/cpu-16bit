@@ -1,0 +1,243 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus II 64-Bit"
+// VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Full Version"
+
+// DATE "03/16/2024 11:08:34"
+
+// 
+// Device: Altera EP4CE6E22C8 Package TQFP144
+// 
+
+// 
+// This Verilog file should be used for ModelSim (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module CPU16bit (
+	CLK,
+	STEP,
+	T1,
+	T2);
+input 	CLK;
+input 	STEP;
+output 	T1;
+output 	T2;
+
+// Design Ports Information
+// T1	=>  Location: PIN_52,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// T2	=>  Location: PIN_31,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// STEP	=>  Location: PIN_23,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// CLK	=>  Location: PIN_39,	 I/O Standard: 2.5 V,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+// synopsys translate_off
+initial $sdf_annotate("CPU16bit_v.sdo");
+// synopsys translate_on
+
+wire \T1~output_o ;
+wire \T2~output_o ;
+wire \STEP~input_o ;
+wire \STEP~inputclkctrl_outclk ;
+wire \SYNTHESIZED_WIRE_6~q ;
+wire \DFF_inst3~q ;
+wire \CLK~input_o ;
+wire \SYNTHESIZED_WIRE_4~combout ;
+wire \SYNTHESIZED_WIRE_4~clkctrl_outclk ;
+wire \SYNTHESIZED_WIRE_1~0_combout ;
+wire \SYNTHESIZED_WIRE_5~q ;
+
+
+// Location: IOOBUF_X16_Y0_N9
+cycloneive_io_obuf \T1~output (
+	.i(\SYNTHESIZED_WIRE_5~q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\T1~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \T1~output .bus_hold = "false";
+defparam \T1~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y7_N2
+cycloneive_io_obuf \T2~output (
+	.i(\SYNTHESIZED_WIRE_6~q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\T2~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \T2~output .bus_hold = "false";
+defparam \T2~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y11_N8
+cycloneive_io_ibuf \STEP~input (
+	.i(STEP),
+	.ibar(gnd),
+	.o(\STEP~input_o ));
+// synopsys translate_off
+defparam \STEP~input .bus_hold = "false";
+defparam \STEP~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: CLKCTRL_G2
+cycloneive_clkctrl \STEP~inputclkctrl (
+	.ena(vcc),
+	.inclk({vcc,vcc,vcc,\STEP~input_o }),
+	.clkselect(2'b00),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.outclk(\STEP~inputclkctrl_outclk ));
+// synopsys translate_off
+defparam \STEP~inputclkctrl .clock_type = "global clock";
+defparam \STEP~inputclkctrl .ena_register_mode = "none";
+// synopsys translate_on
+
+// Location: FF_X1_Y9_N27
+dffeas SYNTHESIZED_WIRE_6(
+	.clk(\SYNTHESIZED_WIRE_4~clkctrl_outclk ),
+	.d(gnd),
+	.asdata(\SYNTHESIZED_WIRE_5~q ),
+	.clrn(\STEP~inputclkctrl_outclk ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(vcc),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\SYNTHESIZED_WIRE_6~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam SYNTHESIZED_WIRE_6.is_wysiwyg = "true";
+defparam SYNTHESIZED_WIRE_6.power_up = "low";
+// synopsys translate_on
+
+// Location: FF_X1_Y9_N15
+dffeas DFF_inst3(
+	.clk(\SYNTHESIZED_WIRE_4~clkctrl_outclk ),
+	.d(gnd),
+	.asdata(\SYNTHESIZED_WIRE_6~q ),
+	.clrn(\STEP~inputclkctrl_outclk ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(vcc),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\DFF_inst3~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam DFF_inst3.is_wysiwyg = "true";
+defparam DFF_inst3.power_up = "low";
+// synopsys translate_on
+
+// Location: IOIBUF_X1_Y0_N15
+cycloneive_io_ibuf \CLK~input (
+	.i(CLK),
+	.ibar(gnd),
+	.o(\CLK~input_o ));
+// synopsys translate_off
+defparam \CLK~input .bus_hold = "false";
+defparam \CLK~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X1_Y9_N14
+cycloneive_lcell_comb SYNTHESIZED_WIRE_4(
+// Equation(s):
+// \SYNTHESIZED_WIRE_4~combout  = LCELL((\DFF_inst3~q ) # (\CLK~input_o ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(\DFF_inst3~q ),
+	.datad(\CLK~input_o ),
+	.cin(gnd),
+	.combout(\SYNTHESIZED_WIRE_4~combout ),
+	.cout());
+// synopsys translate_off
+defparam SYNTHESIZED_WIRE_4.lut_mask = 16'hFFF0;
+defparam SYNTHESIZED_WIRE_4.sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: CLKCTRL_G8
+cycloneive_clkctrl \SYNTHESIZED_WIRE_4~clkctrl (
+	.ena(vcc),
+	.inclk({vcc,vcc,vcc,\SYNTHESIZED_WIRE_4~combout }),
+	.clkselect(2'b00),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.outclk(\SYNTHESIZED_WIRE_4~clkctrl_outclk ));
+// synopsys translate_off
+defparam \SYNTHESIZED_WIRE_4~clkctrl .clock_type = "global clock";
+defparam \SYNTHESIZED_WIRE_4~clkctrl .ena_register_mode = "none";
+// synopsys translate_on
+
+// Location: LCCOMB_X1_Y9_N30
+cycloneive_lcell_comb \SYNTHESIZED_WIRE_1~0 (
+// Equation(s):
+// \SYNTHESIZED_WIRE_1~0_combout  = (!\SYNTHESIZED_WIRE_6~q  & !\SYNTHESIZED_WIRE_5~q )
+
+	.dataa(\SYNTHESIZED_WIRE_6~q ),
+	.datab(gnd),
+	.datac(\SYNTHESIZED_WIRE_5~q ),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(\SYNTHESIZED_WIRE_1~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \SYNTHESIZED_WIRE_1~0 .lut_mask = 16'h0505;
+defparam \SYNTHESIZED_WIRE_1~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: FF_X1_Y9_N31
+dffeas SYNTHESIZED_WIRE_5(
+	.clk(\SYNTHESIZED_WIRE_4~clkctrl_outclk ),
+	.d(\SYNTHESIZED_WIRE_1~0_combout ),
+	.asdata(vcc),
+	.clrn(\STEP~inputclkctrl_outclk ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\SYNTHESIZED_WIRE_5~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam SYNTHESIZED_WIRE_5.is_wysiwyg = "true";
+defparam SYNTHESIZED_WIRE_5.power_up = "low";
+// synopsys translate_on
+
+assign T1 = \T1~output_o ;
+
+assign T2 = \T2~output_o ;
+
+endmodule

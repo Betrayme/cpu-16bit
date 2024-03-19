@@ -1,0 +1,71 @@
+MIF/HEX Update report for CPU16bit
+Tue Mar 19 10:11:16 2024
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. MIF/HEX Update Summary
+  3. MIF/HEX Update Processed Files
+  4. MIF/HEX Update Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------+
+; MIF/HEX Update Summary                                        ;
++-----------------------+---------------------------------------+
+; MIF/HEX Update Status ; Successful - Tue Mar 19 10:11:16 2024 ;
+; Revision Name         ; CPU16bit                              ;
+; Top-level Entity Name ; CPU16bit                              ;
+; Family                ; Cyclone IV E                          ;
+; Device                ; EP4CE6E22C8                           ;
++-----------------------+---------------------------------------+
+
+
++------------------------------------------+
+; MIF/HEX Update Processed Files           ;
++------------------------------------------+
+; File Name                                ;
++------------------------------------------+
+; D:/QuatusIIProject/CPU16bit/DATA7X16.mif ;
++------------------------------------------+
+
+
++-------------------------+
+; MIF/HEX Update Messages ;
++-------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit MIF/HEX Update
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Full Version
+    Info: Processing started: Tue Mar 19 10:11:16 2024
+Info: Command: quartus_cdb CPU16bit -c CPU16bit --update_mif
+Info (39024): Processed the following Memory Initialization File(s)
+    Info (39025): Processed Memory Initialization File D:/QuatusIIProject/CPU16bit/DATA7X16.mif
+Info: Quartus II 64-Bit MIF/HEX Update was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4636 megabytes
+    Info: Processing ended: Tue Mar 19 10:11:16 2024
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+
