@@ -3,7 +3,7 @@ it's a cpu of 16bit based on FPGA
 EDA: QuartusII 13.0
 FPGA: Cyclone 4E EP4CE55F23C8
 # file structure
-Top-Level Entity: CPU16bit  dfa 
+Top-Level Entity: CPU16bit 
 single-step beat generator: clkstep.bdf
 controller: Controlblock.v
 buffer: buffer.v
