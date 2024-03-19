@@ -3,16 +3,16 @@ it's a cpu of 16bit based on FPGA
 EDA: QuartusII 13.0
 FPGA: Cyclone 4E EP4CE55F23C8
 # file structure
-Top-Level Entity: CPU16bit 
-single-step beat generator: clkstep.bdf
-controller: Controlblock.v
-buffer: buffer.v
-RAM(LPM): memory_ram.v
-file for initializing lpm_ram: DATA7X16.mif(16*128)
-address register: addrReg.v
-PC: programReg.v
-register arrays: REG_AR7(16*8)
-shift register: shiftReg
-alu: ALU.v
-woring register: workReg.v
-instruction register: instrReg.v
+Top-Level Entity: CPU16bit<br />
+single-step beat generator: clkstep.bdf<br />
+controller: Controlblock.v<br />
+buffer: buffer.v<br />
+RAM(LPM): memory_ram.v<br />
+file for initializing lpm_ram: DATA7X16.mif(16*128)<br />
+address register: addrReg.v<br />
+PC: programReg.v<br />
+register arrays: REG_AR7(16*8)<br />
+shift register: shiftReg<br />
+alu: ALU.v<br />
+woring register: workReg.v<br />
+instruction register: instrReg.v<br />
