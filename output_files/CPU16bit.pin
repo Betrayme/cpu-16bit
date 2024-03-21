@@ -68,17 +68,17 @@ CHIP  "CPU16bit"  ASSIGNED TO AN: EP4CE6E22C8
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
 -------------------------------------------------------------------------------------------------------------
-test_instrReg[1]             : 1         : output : 2.5 V             :         : 1         : N              
-test_buffer[5]               : 2         : output : 2.5 V             :         : 1         : N              
-DataBus[6]                   : 3         : output : 2.5 V             :         : 1         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 1         :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 2         :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 3         :        :                   :         : 1         :                
 GND                          : 4         : gnd    :                   :         :           :                
 VCCINT                       : 5         : power  :                   : 1.2V    :           :                
 ~ALTERA_ASDO_DATA1~ / RESERVED_INPUT_WITH_WEAK_PULLUP : 6         : input  : 2.5 V             :         : 1         : N              
-test_buffer[8]               : 7         : output : 2.5 V             :         : 1         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 7         :        :                   :         : 1         :                
 ~ALTERA_FLASH_nCE_nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : 8         : input  : 2.5 V             :         : 1         : N              
 nSTATUS                      : 9         :        :                   :         : 1         :                
-test_PC[11]                  : 10        : output : 2.5 V             :         : 1         : N              
-test_PC[9]                   : 11        : output : 2.5 V             :         : 1         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 10        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 11        :        :                   :         : 1         :                
 ~ALTERA_DCLK~                : 12        : output : 2.5 V             :         : 1         : N              
 ~ALTERA_DATA0~ / RESERVED_INPUT_WITH_WEAK_PULLUP : 13        : input  : 2.5 V             :         : 1         : N              
 nCONFIG                      : 14        :        :                   :         : 1         :                
@@ -91,17 +91,17 @@ altera_reserved_tdo          : 20        : output : 2.5 V             :         
 nCE                          : 21        :        :                   :         : 1         :                
 GND                          : 22        : gnd    :                   :         :           :                
 STEP                         : 23        : input  : 2.5 V             :         : 1         : N              
-RST                          : 24        : input  : 2.5 V             :         : 2         : N              
-CLK                          : 25        : input  : 2.5 V             :         : 2         : N              
+GND+                         : 24        :        :                   :         : 2         :                
+GND+                         : 25        :        :                   :         : 2         :                
 VCCIO2                       : 26        : power  :                   : 2.5V    : 2         :                
 GND                          : 27        : gnd    :                   :         :           :                
-test_instrReg[2]             : 28        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 28        :        :                   :         : 2         :                
 VCCINT                       : 29        : power  :                   : 1.2V    :           :                
-DataBus[0]                   : 30        : output : 2.5 V             :         : 2         : N              
-test_T2                      : 31        : output : 2.5 V             :         : 2         : N              
-DataBus[8]                   : 32        : output : 2.5 V             :         : 2         : N              
-DataBus[11]                  : 33        : output : 2.5 V             :         : 2         : N              
-test_instrReg[3]             : 34        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 30        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 31        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 32        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 33        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 34        :        :                   :         : 2         :                
 VCCA1                        : 35        : power  :                   : 2.5V    :           :                
 GNDA1                        : 36        : gnd    :                   :         :           :                
 VCCD_PLL1                    : 37        : power  :                   : 1.2V    :           :                
@@ -109,54 +109,54 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : 38        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : 39        :        :                   :         : 3         :                
 VCCIO3                       : 40        : power  :                   : 2.5V    : 3         :                
 GND                          : 41        : gnd    :                   :         :           :                
-test_instrReg[4]             : 42        : output : 2.5 V             :         : 3         : N              
-test_instrReg[15]            : 43        : output : 2.5 V             :         : 3         : N              
-test_instrReg[10]            : 44        : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 42        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 43        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 44        :        :                   :         : 3         :                
 VCCINT                       : 45        : power  :                   : 1.2V    :           :                
-test_PC[5]                   : 46        : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 46        :        :                   :         : 3         :                
 VCCIO3                       : 47        : power  :                   : 2.5V    : 3         :                
 GND                          : 48        : gnd    :                   :         :           :                
-test_instrReg[6]             : 49        : output : 2.5 V             :         : 3         : N              
-DataBus[5]                   : 50        : output : 2.5 V             :         : 3         : N              
-test_PC[1]                   : 51        : output : 2.5 V             :         : 3         : N              
-test_PC[3]                   : 52        : output : 2.5 V             :         : 3         : N              
-test_PC[14]                  : 53        : output : 2.5 V             :         : 3         : N              
-test_instrReg[11]            : 54        : output : 2.5 V             :         : 4         : N              
-test_currentstate[1]         : 55        : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 49        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 50        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 51        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 52        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 53        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 54        :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 55        :        :                   :         : 4         :                
 VCCIO4                       : 56        : power  :                   : 2.5V    : 4         :                
 GND                          : 57        : gnd    :                   :         :           :                
-test_instrReg[8]             : 58        : output : 2.5 V             :         : 4         : N              
-test_PC[10]                  : 59        : output : 2.5 V             :         : 4         : N              
-DataBus[4]                   : 60        : output : 2.5 V             :         : 4         : N              
+DataBus[4]                   : 58        : output : 2.5 V             :         : 4         : N              
+test_pc[7]                   : 59        : output : 2.5 V             :         : 4         : N              
+test_pc[13]                  : 60        : output : 2.5 V             :         : 4         : N              
 VCCINT                       : 61        : power  :                   : 1.2V    :           :                
 VCCIO4                       : 62        : power  :                   : 2.5V    : 4         :                
 GND                          : 63        : gnd    :                   :         :           :                
-test_instrReg[13]            : 64        : output : 2.5 V             :         : 4         : N              
-test_PC[6]                   : 65        : output : 2.5 V             :         : 4         : N              
-test_currentstate[2]         : 66        : output : 2.5 V             :         : 4         : N              
-test_instrReg[12]            : 67        : output : 2.5 V             :         : 4         : N              
+test_pc[4]                   : 64        : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 65        :        :                   :         : 4         :                
+DataBus[6]                   : 66        : output : 2.5 V             :         : 4         : N              
+test_pc[0]                   : 67        : output : 2.5 V             :         : 4         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : 68        :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 69        :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 70        :        :                   :         : 4         :                
-DataBus[2]                   : 71        : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 71        :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 72        :        :                   :         : 4         :                
-test_currentstate[4]         : 73        : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 73        :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 74        :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 75        :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 76        :        :                   :         : 5         :                
-test_T1                      : 77        : output : 2.5 V             :         : 5         : N              
+test_pc[8]                   : 77        : output : 2.5 V             :         : 5         : N              
 VCCINT                       : 78        : power  :                   : 1.2V    :           :                
 GND                          : 79        : gnd    :                   :         :           :                
-test_currentstate[3]         : 80        : output : 2.5 V             :         : 5         : N              
+DataBus[0]                   : 80        : output : 2.5 V             :         : 5         : N              
 VCCIO5                       : 81        : power  :                   : 2.5V    : 5         :                
 GND                          : 82        : gnd    :                   :         :           :                
-test_PC[15]                  : 83        : output : 2.5 V             :         : 5         : N              
-DataBus[1]                   : 84        : output : 2.5 V             :         : 5         : N              
-test_instrReg[14]            : 85        : output : 2.5 V             :         : 5         : N              
-test_currentstate[0]         : 86        : output : 2.5 V             :         : 5         : N              
-DataBus[14]                  : 87        : output : 2.5 V             :         : 5         : N              
+DataBus[2]                   : 83        : output : 2.5 V             :         : 5         : N              
+CLK                          : 84        : input  : 2.5 V             :         : 5         : N              
+DataBus[1]                   : 85        : output : 2.5 V             :         : 5         : N              
+test_pc[5]                   : 86        : output : 2.5 V             :         : 5         : N              
+DataBus[8]                   : 87        : output : 2.5 V             :         : 5         : N              
 GND+                         : 88        :        :                   :         : 5         :                
-GND+                         : 89        :        :                   :         : 5         :                
+RST                          : 89        : input  : 2.5 V             :         : 5         : N              
 GND+                         : 90        :        :                   :         : 6         :                
 GND+                         : 91        :        :                   :         : 6         :                
 CONF_DONE                    : 92        :        :                   :         : 6         :                
@@ -165,51 +165,51 @@ MSEL0                        : 94        :        :                   :         
 GND                          : 95        : gnd    :                   :         :           :                
 MSEL1                        : 96        :        :                   :         : 6         :                
 MSEL2                        : 97        :        :                   :         : 6         :                
-test_buffer[14]              : 98        : output : 2.5 V             :         : 6         : N              
-DataBus[13]                  : 99        : output : 2.5 V             :         : 6         : N              
-test_buffer[6]               : 100       : output : 2.5 V             :         : 6         : N              
+DataBus[11]                  : 98        : output : 2.5 V             :         : 6         : N              
+DataBus[10]                  : 99        : output : 2.5 V             :         : 6         : N              
+test_pc[9]                   : 100       : output : 2.5 V             :         : 6         : N              
 ~ALTERA_nCEO~ / RESERVED_OUTPUT_OPEN_DRAIN : 101       : output : 2.5 V             :         : 6         : N              
 VCCINT                       : 102       : power  :                   : 1.2V    :           :                
-DataBus[15]                  : 103       : output : 2.5 V             :         : 6         : N              
-test_buffer[9]               : 104       : output : 2.5 V             :         : 6         : N              
-test_PC[12]                  : 105       : output : 2.5 V             :         : 6         : N              
-test_PC[8]                   : 106       : output : 2.5 V             :         : 6         : N              
+test_pc[1]                   : 103       : output : 2.5 V             :         : 6         : N              
+DataBus[5]                   : 104       : output : 2.5 V             :         : 6         : N              
+DataBus[13]                  : 105       : output : 2.5 V             :         : 6         : N              
+test_pc[10]                  : 106       : output : 2.5 V             :         : 6         : N              
 VCCA2                        : 107       : power  :                   : 2.5V    :           :                
 GNDA2                        : 108       : gnd    :                   :         :           :                
 VCCD_PLL2                    : 109       : power  :                   : 1.2V    :           :                
-test_buffer[13]              : 110       : output : 2.5 V             :         : 7         : N              
-DataBus[9]                   : 111       : output : 2.5 V             :         : 7         : N              
-test_PC[7]                   : 112       : output : 2.5 V             :         : 7         : N              
-test_buffer[15]              : 113       : output : 2.5 V             :         : 7         : N              
-DataBus[7]                   : 114       : output : 2.5 V             :         : 7         : N              
-test_buffer[10]              : 115       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 110       :        :                   :         : 7         :                
+DataBus[14]                  : 111       : output : 2.5 V             :         : 7         : N              
+test_pc[6]                   : 112       : output : 2.5 V             :         : 7         : N              
+DataBus[15]                  : 113       : output : 2.5 V             :         : 7         : N              
+DataBus[9]                   : 114       : output : 2.5 V             :         : 7         : N              
+test_pc[15]                  : 115       : output : 2.5 V             :         : 7         : N              
 VCCINT                       : 116       : power  :                   : 1.2V    :           :                
 VCCIO7                       : 117       : power  :                   : 2.5V    : 7         :                
 GND                          : 118       : gnd    :                   :         :           :                
-test_buffer[2]               : 119       : output : 2.5 V             :         : 7         : N              
-test_PC[2]                   : 120       : output : 2.5 V             :         : 7         : N              
-test_PC[4]                   : 121       : output : 2.5 V             :         : 7         : N              
+test_pc[2]                   : 119       : output : 2.5 V             :         : 7         : N              
+DataBus[7]                   : 120       : output : 2.5 V             :         : 7         : N              
+DataBus[3]                   : 121       : output : 2.5 V             :         : 7         : N              
 VCCIO7                       : 122       : power  :                   : 2.5V    : 7         :                
 GND                          : 123       : gnd    :                   :         :           :                
-test_buffer[3]               : 124       : output : 2.5 V             :         : 7         : N              
-DataBus[10]                  : 125       : output : 2.5 V             :         : 7         : N              
-test_buffer[12]              : 126       : output : 2.5 V             :         : 7         : N              
-test_buffer[7]               : 127       : output : 2.5 V             :         : 7         : N              
-DataBus[12]                  : 128       : output : 2.5 V             :         : 8         : N              
-test_buffer[1]               : 129       : output : 2.5 V             :         : 8         : N              
+DataBus[12]                  : 124       : output : 2.5 V             :         : 7         : N              
+test_pc[12]                  : 125       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 126       :        :                   :         : 7         :                
+test_pc[11]                  : 127       : output : 2.5 V             :         : 7         : N              
+test_pc[14]                  : 128       : output : 2.5 V             :         : 8         : N              
+test_pc[3]                   : 129       : output : 2.5 V             :         : 8         : N              
 VCCIO8                       : 130       : power  :                   : 2.5V    : 8         :                
 GND                          : 131       : gnd    :                   :         :           :                
-test_PC[13]                  : 132       : output : 2.5 V             :         : 8         : N              
-test_buffer[4]               : 133       : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 132       :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 133       :        :                   :         : 8         :                
 VCCINT                       : 134       : power  :                   : 1.2V    :           :                
-test_buffer[0]               : 135       : output : 2.5 V             :         : 8         : N              
-test_PC[0]                   : 136       : output : 2.5 V             :         : 8         : N              
-test_buffer[11]              : 137       : output : 2.5 V             :         : 8         : N              
-test_instrReg[5]             : 138       : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 135       :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 136       :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 137       :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 138       :        :                   :         : 8         :                
 VCCIO8                       : 139       : power  :                   : 2.5V    : 8         :                
 GND                          : 140       : gnd    :                   :         :           :                
-test_instrReg[0]             : 141       : output : 2.5 V             :         : 8         : N              
-DataBus[3]                   : 142       : output : 2.5 V             :         : 8         : N              
-test_instrReg[9]             : 143       : output : 2.5 V             :         : 8         : N              
-test_instrReg[7]             : 144       : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 141       :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 142       :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 143       :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 144       :        :                   :         : 8         :                
 GND                          : EPAD      :        :                   :         :           :                

@@ -20,7 +20,7 @@ applicable agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 216 128)
+	(rect 16 16 176 128)
 	(text "buffer" (rect 5 0 29 12)(font "Arial" ))
 	(text "inst" (rect 8 96 20 108)(font "Arial" ))
 	(port
@@ -33,39 +33,25 @@ applicable agreement for further details.
 	(port
 		(pt 0 48)
 		(input)
-		(text "en" (rect 0 0 9 12)(font "Arial" ))
-		(text "en" (rect 21 43 30 55)(font "Arial" ))
+		(text "rst" (rect 0 0 10 12)(font "Arial" ))
+		(text "rst" (rect 21 43 31 55)(font "Arial" ))
 		(line (pt 0 48)(pt 16 48)(line_width 1))
 	)
 	(port
 		(pt 0 64)
 		(input)
-		(text "rst" (rect 0 0 10 12)(font "Arial" ))
-		(text "rst" (rect 21 59 31 71)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64)(line_width 1))
-	)
-	(port
-		(pt 0 80)
-		(input)
 		(text "a[15..0]" (rect 0 0 28 12)(font "Arial" ))
-		(text "a[15..0]" (rect 21 75 49 87)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80)(line_width 3))
+		(text "a[15..0]" (rect 21 59 49 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
 	)
 	(port
-		(pt 200 32)
+		(pt 160 32)
 		(output)
 		(text "q[15..0]" (rect 0 0 28 12)(font "Arial" ))
-		(text "q[15..0]" (rect 151 27 179 39)(font "Arial" ))
-		(line (pt 200 32)(pt 184 32)(line_width 3))
-	)
-	(port
-		(pt 200 48)
-		(output)
-		(text "test_buffer[15..0]" (rect 0 0 68 12)(font "Arial" ))
-		(text "test_buffer[15..0]" (rect 111 43 179 55)(font "Arial" ))
-		(line (pt 200 48)(pt 184 48)(line_width 3))
+		(text "q[15..0]" (rect 111 27 139 39)(font "Arial" ))
+		(line (pt 160 32)(pt 144 32)(line_width 3))
 	)
 	(drawing
-		(rectangle (rect 16 16 184 96)(line_width 1))
+		(rectangle (rect 16 16 144 96)(line_width 1))
 	)
 )

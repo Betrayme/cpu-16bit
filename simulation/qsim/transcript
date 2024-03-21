@@ -2,16 +2,16 @@
 # ** Warning: (vlib-34) Library already exists at "work".
 # 
 # Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 10:14:40 on Mar 19,2024
+# Start time: 19:36:39 on Mar 20,2024
 # vlog -work work CPU16bit.vo 
 # -- Compiling module CPU16bit
 # 
 # Top level modules:
 # 	CPU16bit
-# End time: 10:14:40 on Mar 19,2024, Elapsed time: 0:00:00
+# End time: 19:36:39 on Mar 20,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 10:14:40 on Mar 19,2024
+# Start time: 19:36:39 on Mar 20,2024
 # vlog -work work Waveform.vwf.vt 
 # -- Compiling module CPU16bit_vlg_sample_tst
 # -- Compiling module CPU16bit_vlg_check_tst
@@ -19,10 +19,10 @@
 # 
 # Top level modules:
 # 	CPU16bit_vlg_vec_tst
-# End time: 10:14:40 on Mar 19,2024, Elapsed time: 0:00:00
+# End time: 19:36:39 on Mar 20,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -c -do "CPU16bit.do" 
-# Start time: 10:14:40 on Mar 19,2024
+# Start time: 19:36:39 on Mar 20,2024
 # ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
 # 
 # //  ModelSim SE-64 10.4 Dec  3 2014 
@@ -54,8 +54,8 @@
 # Loading cycloneive_ver.cycloneive_clkctrl
 # Loading cycloneive_ver.cycloneive_mux41
 # Loading cycloneive_ver.cycloneive_ena_reg
-# Loading altera_ver.dffeas
 # Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading altera_ver.dffeas
 # Loading cycloneive_ver.cycloneive_jtag
 # Loading cycloneive_ver.cycloneive_ram_block
 # Loading cycloneive_ver.cycloneive_ram_register
@@ -79,156 +79,18 @@
 # SDF 10.4 Compiler 2014.12 Dec  3 2014
 # 
 # Loading instances from CPU16bit_v.sdo
-# ** Warning: (vsim-3017) Waveform.vwf.vt(1554): [TFMPC] - Too few port connections. Expected 14, found 10.
+# ** Warning: (vsim-3017) Waveform.vwf.vt(443): [TFMPC] - Too few port connections. Expected 9, found 5.
 #    Time: 0 ps  Iteration: 0  Instance: /CPU16bit_vlg_vec_tst/i1 File: CPU16bit.vo
-# ** Warning: (vsim-3722) Waveform.vwf.vt(1554): [TFMPC] - Missing connection for port 'altera_reserved_tms'.
-# ** Warning: (vsim-3722) Waveform.vwf.vt(1554): [TFMPC] - Missing connection for port 'altera_reserved_tck'.
-# ** Warning: (vsim-3722) Waveform.vwf.vt(1554): [TFMPC] - Missing connection for port 'altera_reserved_tdi'.
-# ** Warning: (vsim-3722) Waveform.vwf.vt(1554): [TFMPC] - Missing connection for port 'altera_reserved_tdo'.
+# ** Warning: (vsim-3722) Waveform.vwf.vt(443): [TFMPC] - Missing connection for port 'altera_reserved_tms'.
+# ** Warning: (vsim-3722) Waveform.vwf.vt(443): [TFMPC] - Missing connection for port 'altera_reserved_tck'.
+# ** Warning: (vsim-3722) Waveform.vwf.vt(443): [TFMPC] - Missing connection for port 'altera_reserved_tdi'.
+# ** Warning: (vsim-3722) Waveform.vwf.vt(443): [TFMPC] - Missing connection for port 'altera_reserved_tdo'.
 # Loading altera_ver.PRIM_GDFF_LOW
 # Loading timing data from CPU16bit_v.sdo
 # ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
 #    Time: 0 ps  Iteration: 0  Instance: /CPU16bit_vlg_vec_tst File: Waveform.vwf.vt
-# ERROR! Vector Mismatch for output port DataBus[0] :: @time = 1000000.000 ps
-#      Expected value = 0000000000000000
-#      Real value = zzzzzzzzzzzzzzzz
-# ERROR! Vector Mismatch for output port DataBus[1] :: @time = 1000000.000 ps
-#      Expected value = 0000000000000000
-#      Real value = zzzzzzzzzzzzzzzz
-# ERROR! Vector Mismatch for output port DataBus[2] :: @time = 1000000.000 ps
-#      Expected value = 0000000000000000
-#      Real value = zzzzzzzzzzzzzzzz
-# ERROR! Vector Mismatch for output port DataBus[3] :: @time = 1000000.000 ps
-#      Expected value = 0000000000000000
-#      Real value = zzzzzzzzzzzzzzzz
-# ERROR! Vector Mismatch for output port DataBus[4] :: @time = 1000000.000 ps
-#      Expected value = 0000000000000000
-#      Real value = zzzzzzzzzzzzzzzz
-# ERROR! Vector Mismatch for output port DataBus[5] :: @time = 1000000.000 ps
-#      Expected value = 0000000000000000
-#      Real value = zzzzzzzzzzzzzzzz
-# ERROR! Vector Mismatch for output port DataBus[6] :: @time = 1000000.000 ps
-#      Expected value = 0000000000000000
-#      Real value = zzzzzzzzzzzzzzzz
-# ERROR! Vector Mismatch for output port DataBus[7] :: @time = 1000000.000 ps
-#      Expected value = 0000000000000000
-#      Real value = zzzzzzzzzzzzzzzz
-# ERROR! Vector Mismatch for output port DataBus[8] :: @time = 1000000.000 ps
-#      Expected value = 0000000000000000
-#      Real value = zzzzzzzzzzzzzzzz
-# ERROR! Vector Mismatch for output port DataBus[9] :: @time = 1000000.000 ps
-#      Expected value = 0000000000000000
-#      Real value = zzzzzzzzzzzzzzzz
-# ERROR! Vector Mismatch for output port DataBus[10] :: @time = 1000000.000 ps
-#      Expected value = 0000000000000000
-#      Real value = zzzzzzzzzzzzzzzz
-# ERROR! Vector Mismatch for output port DataBus[11] :: @time = 1000000.000 ps
-#      Expected value = 0000000000000000
-#      Real value = zzzzzzzzzzzzzzzz
-# ERROR! Vector Mismatch for output port DataBus[12] :: @time = 1000000.000 ps
-#      Expected value = 0000000000000000
-#      Real value = zzzzzzzzzzzzzzzz
-# ERROR! Vector Mismatch for output port DataBus[13] :: @time = 1000000.000 ps
-#      Expected value = 0000000000000000
-#      Real value = zzzzzzzzzzzzzzzz
-# ERROR! Vector Mismatch for output port DataBus[14] :: @time = 1000000.000 ps
-#      Expected value = 0000000000000000
-#      Real value = zzzzzzzzzzzzzzzz
-# ERROR! Vector Mismatch for output port DataBus[15] :: @time = 1000000.000 ps
-#      Expected value = 0000000000000000
-#      Real value = zzzzzzzzzzzzzzzz
-# ERROR! Vector Mismatch for output port test_currentstate[0] :: @time = 1250000.000 ps
-#      Expected value = 00000
-#      Real value = 00001
-# ERROR! Vector Mismatch for output port test_T1 :: @time = 1500000.000 ps
-#      Expected value = 0
-#      Real value = 1
-# ERROR! Vector Mismatch for output port test_T2 :: @time = 2000000.000 ps
-#      Expected value = 0
-#      Real value = 1
-# ERROR! Vector Mismatch for output port test_currentstate[1] :: @time = 3250000.000 ps
-#      Expected value = 00000
-#      Real value = 00010
-# ERROR! Vector Mismatch for output port test_instrReg[0] :: @time = 4000000.000 ps
-#      Expected value = 0000000000000000
-#      Real value = 0001100000000001
-# ERROR! Vector Mismatch for output port test_instrReg[11] :: @time = 4000000.000 ps
-#      Expected value = 0000000000000000
-#      Real value = 0001100000000001
-# ERROR! Vector Mismatch for output port test_instrReg[12] :: @time = 4000000.000 ps
-#      Expected value = 0000000000000000
-#      Real value = 0001100000000001
-# ERROR! Vector Mismatch for output port test_currentstate[3] :: @time = 19250000.000 ps
-#      Expected value = 00000
-#      Real value = 01011
-# ERROR! Vector Mismatch for output port test_buffer[0] :: @time = 20000000.000 ps
-#      Expected value = 0000000000000000
-#      Real value = 0000000000000001
-# ERROR! Vector Mismatch for output port test_currentstate[2] :: @time = 21250000.000 ps
-#      Expected value = 00000
-#      Real value = 01100
-# ERROR! Vector Mismatch for output port test_PC[0] :: @time = 21500000.000 ps
-#      Expected value = 0000000000000000
-#      Real value = 0000000000000001
-# ERROR! Vector Mismatch for output port test_buffer[1] :: @time = 26000000.000 ps
-#      Expected value = 0000000000000000
-#      Real value = 0000000000000010
-# ERROR! Vector Mismatch for output port test_PC[1] :: @time = 27500000.000 ps
-#      Expected value = 0000000000000000
-#      Real value = 0000000000000010
-# ERROR! Vector Mismatch for output port test_instrReg[1] :: @time = 32000000.000 ps
-#      Expected value = 0000000000000000
-#      Real value = 0001100000000010
-# ERROR! Vector Mismatch for output port test_buffer[2] :: @time = 42000000.000 ps
-#      Expected value = 0000000000000000
-#      Real value = 0000000000000100
-# ERROR! Vector Mismatch for output port test_PC[2] :: @time = 43500000.000 ps
-#      Expected value = 0000000000000000
-#      Real value = 0000000000000100
-# ERROR! Vector Mismatch for output port test_instrReg[3] :: @time = 48000000.000 ps
-#      Expected value = 0000000000000000
-#      Real value = 0000100011001010
-# ERROR! Vector Mismatch for output port test_instrReg[6] :: @time = 48000000.000 ps
-#      Expected value = 0000000000000000
-#      Real value = 0000100011001010
-# ERROR! Vector Mismatch for output port test_instrReg[7] :: @time = 48000000.000 ps
-#      Expected value = 0000000000000000
-#      Real value = 0000100011001010
-# ERROR! Vector Mismatch for output port test_instrReg[2] :: @time = 64000000.000 ps
-#      Expected value = 0000000000000000
-#      Real value = 1111111111111111
-# ERROR! Vector Mismatch for output port test_instrReg[4] :: @time = 64000000.000 ps
-#      Expected value = 0000000000000000
-#      Real value = 1111111111111111
-# ERROR! Vector Mismatch for output port test_instrReg[5] :: @time = 64000000.000 ps
-#      Expected value = 0000000000000000
-#      Real value = 1111111111111111
-# ERROR! Vector Mismatch for output port test_instrReg[8] :: @time = 64000000.000 ps
-#      Expected value = 0000000000000000
-#      Real value = 1111111111111111
-# ERROR! Vector Mismatch for output port test_instrReg[9] :: @time = 64000000.000 ps
-#      Expected value = 0000000000000000
-#      Real value = 1111111111111111
-# ERROR! Vector Mismatch for output port test_instrReg[10] :: @time = 64000000.000 ps
-#      Expected value = 0000000000000000
-#      Real value = 1111111111111111
-# ERROR! Vector Mismatch for output port test_instrReg[13] :: @time = 64000000.000 ps
-#      Expected value = 0000000000000000
-#      Real value = 1111111111111111
-# ERROR! Vector Mismatch for output port test_instrReg[14] :: @time = 64000000.000 ps
-#      Expected value = 0000000000000000
-#      Real value = 1111111111111111
-# ERROR! Vector Mismatch for output port test_instrReg[15] :: @time = 64000000.000 ps
-#      Expected value = 0000000000000000
-#      Real value = 1111111111111111
-# ERROR! Vector Mismatch for output port test_buffer[3] :: @time = 88000000.000 ps
-#      Expected value = 0000000000000000
-#      Real value = 0000000000001000
-# ERROR! Vector Mismatch for output port test_PC[3] :: @time = 89500000.000 ps
-#      Expected value = 0000000000000000
-#      Real value = 0000000000001000
-#          46 mismatched vectors : Simulation failed !
-# ** Note: $finish    : Waveform.vwf.vt(1532)
+# Simulation passed !
+# ** Note: $finish    : Waveform.vwf.vt(426)
 #    Time: 100 us  Iteration: 0  Instance: /CPU16bit_vlg_vec_tst/tb_out
-# End time: 10:14:41 on Mar 19,2024, Elapsed time: 0:00:01
+# End time: 19:36:41 on Mar 20,2024, Elapsed time: 0:00:02
 # Errors: 6, Warnings: 6

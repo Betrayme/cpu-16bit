@@ -5,7 +5,9 @@ module REG_AR7(
     output wire [15:0] q
 );
 reg [15:0] ramdata[7:0];
-always @(posedge CLK) 
+always @(posedge CLK)
+begin
 ramdata[sel]<=data;
+end
 assign q=ramdata[sel];
 endmodule

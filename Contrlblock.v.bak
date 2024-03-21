@@ -1,4 +1,4 @@
-/*------------16位指令------------*/
+ /*------------16位指令------------*/
 /*---------前5位为机器码---------*/
 /*单字指令(16bit)*/
 //操作码5b'00001 	//ADD R3 R1 R2 把R1、R2内容相加结果放在R3中 低九位的没三位从高到低分别是R3、sR1、R2
@@ -44,11 +44,7 @@ module Contrlblock(
 	output reg ramRd,					//ram读使能,T1有效
 	output reg ramWr,					//ram写使能,T1有效
 	
-	output reg instrWr,					//指令寄存器写使能,T2有效
-//测试
-	output wire [4:0] test_currentstate,
-	output wire [15:0] test_instrReg
-//
+	output reg instrWr				//指令寄存器写使能,T2有效
 );
 
 //shiftSel值
@@ -56,7 +52,7 @@ parameter sftpass=3'd0,sftl=3'd1,sftr=3'd2,rotl=3'd3,rotr=3'd4;
 //aluSel值
 parameter alupass=4'd0,andOp=4'd1,orOp=4'd2,notOp=4'd3,xorOp=4'd4,plus=4'd5,sub=4'd6,inc=4'd7,dec=4'd8,zero=4'd9;
 
-//状态值
+//状态值 要修改状态值还要修改顶层设计中的调用参数值!
 parameter reset1=0;
 parameter reset2=1;
 parameter reset3=2;
@@ -76,9 +72,8 @@ parameter ld3=13;
 reg [4:0] next_state;
 
 //测试
-assign test_currentstate=current_state;
-assign test_instrReg=instrReg;
-//
+assign current_state_out=current_state;
+
 
 //主控组合过程
 always @ (current_state or instrReg)						//waring(10240)可忽略

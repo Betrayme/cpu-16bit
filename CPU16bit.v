@@ -14,25 +14,14 @@
 
 // PROGRAM		"Quartus II 64-Bit"
 // VERSION		"Version 13.1.0 Build 162 10/23/2013 SJ Full Version"
-// CREATED		"Mon Mar 18 18:06:55 2024"
-
-//已知的waring:12241 
+// CREATED		"Wed Mar 20 19:16:34 2024"
 
 module CPU16bit(
 	CLK,
 	STEP,
 	RST,
 	DataBus,
-//测试
-	test_currentstate,
-	test_instrReg,
-	test_T1,
-	test_T2,
-	test_PC,
-	//test_aluout,
-	//test_shiftReg
-	test_buffer
-//
+
 );
 
 
@@ -41,106 +30,71 @@ input wire	STEP;
 input wire	RST;
 output wire	[15:0] DataBus;
 
-//测试
-output wire [4:0] test_currentstate;
-output wire [15:0] test_instrReg;
-output wire test_T1;
-output wire test_T2;
-output wire [15:0] test_PC;
-//output wire [15:0] test_aluout;
-//output wire [15:0] test_shiftReg;
-output wire [15:0] test_buffer;
-//
-
 wire	[6:0] AddressBus;
 wire	[15:0] DataBus_ALTERA_SYNTHESIZED;
-wire	[15:0] SYNTHESIZED_WIRE_0;
-wire	SYNTHESIZED_WIRE_1;
+wire	T1;
+wire	T2;
+wire	SYNTHESIZED_WIRE_0;
+wire	[15:0] SYNTHESIZED_WIRE_1;
 wire	SYNTHESIZED_WIRE_2;
-wire	[2:0] SYNTHESIZED_WIRE_3;
-wire	SYNTHESIZED_WIRE_4;
+wire	SYNTHESIZED_WIRE_3;
+wire	[15:0] SYNTHESIZED_WIRE_4;
 wire	[15:0] SYNTHESIZED_WIRE_5;
 wire	SYNTHESIZED_WIRE_6;
-wire	SYNTHESIZED_WIRE_7;
-wire	[15:0] SYNTHESIZED_WIRE_8;
+wire	[15:0] SYNTHESIZED_WIRE_7;
+wire	SYNTHESIZED_WIRE_8;
 wire	SYNTHESIZED_WIRE_9;
-wire	[15:0] SYNTHESIZED_WIRE_10;
+wire	[2:0] SYNTHESIZED_WIRE_10;
 wire	SYNTHESIZED_WIRE_11;
-wire	SYNTHESIZED_WIRE_12;
+wire	[15:0] SYNTHESIZED_WIRE_12;
 wire	SYNTHESIZED_WIRE_13;
-wire	SYNTHESIZED_WIRE_14;
+wire	[15:0] SYNTHESIZED_WIRE_14;
 wire	SYNTHESIZED_WIRE_15;
 wire	SYNTHESIZED_WIRE_16;
-wire	[3:0] SYNTHESIZED_WIRE_17;
-wire	[15:0] SYNTHESIZED_WIRE_18;
-wire	[15:0] SYNTHESIZED_WIRE_19;
-wire	[2:0] SYNTHESIZED_WIRE_20;
-wire	SYNTHESIZED_WIRE_21;
-wire	SYNTHESIZED_WIRE_22;
-wire	[15:0] SYNTHESIZED_WIRE_23;
+wire	SYNTHESIZED_WIRE_17;
+wire	SYNTHESIZED_WIRE_18;
+wire	SYNTHESIZED_WIRE_19;
+wire	[3:0] SYNTHESIZED_WIRE_20;
+wire	[15:0] SYNTHESIZED_WIRE_21;
+wire	[15:0] SYNTHESIZED_WIRE_22;
+wire	[2:0] SYNTHESIZED_WIRE_23;
+wire	SYNTHESIZED_WIRE_24;
 
 
 
 
 
-Contrlblock	b2v_inst(
-	.clock(STEP),
-	.reset(RST),
-	.instrReg(SYNTHESIZED_WIRE_0),
-	.regRd(SYNTHESIZED_WIRE_6),
-	.regWr(SYNTHESIZED_WIRE_4),
-	.workregWr(SYNTHESIZED_WIRE_16),
-	.outRegWr(SYNTHESIZED_WIRE_1),
-	.outRegRd(SYNTHESIZED_WIRE_22),
-	.progCntRd(SYNTHESIZED_WIRE_9),
-	.progCntWr(SYNTHESIZED_WIRE_7),
-	.addrRegWr(SYNTHESIZED_WIRE_12),
-	.ramRd(SYNTHESIZED_WIRE_11),
-	.ramWr(SYNTHESIZED_WIRE_13),
-	.instrWr(SYNTHESIZED_WIRE_15),
-	.aluSel(SYNTHESIZED_WIRE_17),
-	.regSel(SYNTHESIZED_WIRE_3),
-	.shiftSel(SYNTHESIZED_WIRE_20),
-	//测试
-	.test_currentstate(test_currentstate),
-	.test_instrReg(test_instrReg));
-	
-	defparam	b2v_inst.adds1 = 8;
-	defparam	b2v_inst.adds2 = 9;
-	defparam	b2v_inst.adds3 = 10;
-	defparam	b2v_inst.alupass = 4'b0000;
-	defparam	b2v_inst.andOp = 4'b0001;
-	defparam	b2v_inst.dec = 4'b1000;
-	defparam	b2v_inst.execute = 3;
-	defparam	b2v_inst.inc = 4'b0111;
-	defparam	b2v_inst.incPC1 = 4;
-	defparam	b2v_inst.incPC2 = 5;
-	defparam	b2v_inst.incPC3 = 6;
-	defparam	b2v_inst.notOp = 4'b0011;
-	defparam	b2v_inst.orOp = 4'b0010;
-	defparam	b2v_inst.plus = 4'b0101;
-	defparam	b2v_inst.reset1 = 0;
-	defparam	b2v_inst.reset2 = 1;
-	defparam	b2v_inst.reset3 = 2;
-	defparam	b2v_inst.rotl = 3'b011;
-	defparam	b2v_inst.rotr = 3'b100;
-	defparam	b2v_inst.sftl = 3'b001;
-	defparam	b2v_inst.sftpass = 3'b000;
-	defparam	b2v_inst.sftr = 3'b010;
-	defparam	b2v_inst.sub = 4'b0110;
-	defparam	b2v_inst.xorOp = 4'b0100;
-	defparam	b2v_inst.zero = 4'b1001;
+addrReg	b2v_addrReg(
+	.CLK(T2),
+	.rst(RST),
+	.load(SYNTHESIZED_WIRE_0),
+	.d(DataBus_ALTERA_SYNTHESIZED),
+	.addrout(AddressBus)
+	);
 
-assign	SYNTHESIZED_WIRE_21 = T2 & SYNTHESIZED_WIRE_1;
+assign	DataBus_ALTERA_SYNTHESIZED[15] = SYNTHESIZED_WIRE_2 ? SYNTHESIZED_WIRE_1[15] : 1'bz;
+assign	DataBus_ALTERA_SYNTHESIZED[14] = SYNTHESIZED_WIRE_2 ? SYNTHESIZED_WIRE_1[14] : 1'bz;
+assign	DataBus_ALTERA_SYNTHESIZED[13] = SYNTHESIZED_WIRE_2 ? SYNTHESIZED_WIRE_1[13] : 1'bz;
+assign	DataBus_ALTERA_SYNTHESIZED[12] = SYNTHESIZED_WIRE_2 ? SYNTHESIZED_WIRE_1[12] : 1'bz;
+assign	DataBus_ALTERA_SYNTHESIZED[11] = SYNTHESIZED_WIRE_2 ? SYNTHESIZED_WIRE_1[11] : 1'bz;
+assign	DataBus_ALTERA_SYNTHESIZED[10] = SYNTHESIZED_WIRE_2 ? SYNTHESIZED_WIRE_1[10] : 1'bz;
+assign	DataBus_ALTERA_SYNTHESIZED[9] = SYNTHESIZED_WIRE_2 ? SYNTHESIZED_WIRE_1[9] : 1'bz;
+assign	DataBus_ALTERA_SYNTHESIZED[8] = SYNTHESIZED_WIRE_2 ? SYNTHESIZED_WIRE_1[8] : 1'bz;
+assign	DataBus_ALTERA_SYNTHESIZED[7] = SYNTHESIZED_WIRE_2 ? SYNTHESIZED_WIRE_1[7] : 1'bz;
+assign	DataBus_ALTERA_SYNTHESIZED[6] = SYNTHESIZED_WIRE_2 ? SYNTHESIZED_WIRE_1[6] : 1'bz;
+assign	DataBus_ALTERA_SYNTHESIZED[5] = SYNTHESIZED_WIRE_2 ? SYNTHESIZED_WIRE_1[5] : 1'bz;
+assign	DataBus_ALTERA_SYNTHESIZED[4] = SYNTHESIZED_WIRE_2 ? SYNTHESIZED_WIRE_1[4] : 1'bz;
+assign	DataBus_ALTERA_SYNTHESIZED[3] = SYNTHESIZED_WIRE_2 ? SYNTHESIZED_WIRE_1[3] : 1'bz;
+assign	DataBus_ALTERA_SYNTHESIZED[2] = SYNTHESIZED_WIRE_2 ? SYNTHESIZED_WIRE_1[2] : 1'bz;
+assign	DataBus_ALTERA_SYNTHESIZED[1] = SYNTHESIZED_WIRE_2 ? SYNTHESIZED_WIRE_1[1] : 1'bz;
+assign	DataBus_ALTERA_SYNTHESIZED[0] = SYNTHESIZED_WIRE_2 ? SYNTHESIZED_WIRE_1[0] : 1'bz;
 
 
-REG_AR7	b2v_inst11(
-	.CLK(SYNTHESIZED_WIRE_2),
-	.data(DataBus_ALTERA_SYNTHESIZED),
-	.sel(SYNTHESIZED_WIRE_3),
+buffer	b2v_buffer(
+	.CLK(SYNTHESIZED_WIRE_3),
+	.rst(RST),
+	.a(SYNTHESIZED_WIRE_4),
 	.q(SYNTHESIZED_WIRE_5));
-
-assign	SYNTHESIZED_WIRE_2 = T2 & SYNTHESIZED_WIRE_4;
 
 assign	DataBus_ALTERA_SYNTHESIZED[15] = SYNTHESIZED_WIRE_6 ? SYNTHESIZED_WIRE_5[15] : 1'bz;
 assign	DataBus_ALTERA_SYNTHESIZED[14] = SYNTHESIZED_WIRE_6 ? SYNTHESIZED_WIRE_5[14] : 1'bz;
@@ -160,101 +114,136 @@ assign	DataBus_ALTERA_SYNTHESIZED[1] = SYNTHESIZED_WIRE_6 ? SYNTHESIZED_WIRE_5[1
 assign	DataBus_ALTERA_SYNTHESIZED[0] = SYNTHESIZED_WIRE_6 ? SYNTHESIZED_WIRE_5[0] : 1'bz;
 
 
-programReg	b2v_inst14(
-	.CLK(T1),
-	.rst(RST),
-	.load(SYNTHESIZED_WIRE_7),
-	.d(DataBus_ALTERA_SYNTHESIZED),
-	.q(SYNTHESIZED_WIRE_8),
-//测试
-	.test_PC(test_PC));
+Contrlblock	b2v_inst(
+	.clock(STEP),
+	.reset(RST),
+	.instrReg(SYNTHESIZED_WIRE_7),
+	.regRd(SYNTHESIZED_WIRE_2),
+	.regWr(SYNTHESIZED_WIRE_11),
+	.workregWr(SYNTHESIZED_WIRE_19),
+	.outRegWr(SYNTHESIZED_WIRE_8),
+	.outRegRd(SYNTHESIZED_WIRE_6),
+	.progCntRd(SYNTHESIZED_WIRE_13),
+	.progCntWr(SYNTHESIZED_WIRE_24),
+	.addrRegWr(SYNTHESIZED_WIRE_0),
+	.ramRd(SYNTHESIZED_WIRE_15),
+	.ramWr(SYNTHESIZED_WIRE_16),
+	.instrWr(SYNTHESIZED_WIRE_18),
+	.aluSel(SYNTHESIZED_WIRE_20),
+	.regSel(SYNTHESIZED_WIRE_10),
+	.shiftSel(SYNTHESIZED_WIRE_23));
+	defparam	b2v_inst.adds1 = 8;
+	defparam	b2v_inst.adds2 = 9;
+	defparam	b2v_inst.adds3 = 10;
+	defparam	b2v_inst.alupass = 4'b0000;
+	defparam	b2v_inst.andOp = 4'b0001;
+	defparam	b2v_inst.dec = 4'b1000;
+	defparam	b2v_inst.execute = 3;
+	defparam	b2v_inst.inc = 4'b0111;
+	defparam	b2v_inst.incPC1 = 4;
+	defparam	b2v_inst.incPC2 = 5;
+	defparam	b2v_inst.incPC3 = 6;
+	defparam	b2v_inst.incPC4 = 7;
+	defparam	b2v_inst.ld1 = 11;
+	defparam	b2v_inst.ld2 = 12;
+	defparam	b2v_inst.ld3 = 13;
+	defparam	b2v_inst.notOp = 4'b0011;
+	defparam	b2v_inst.orOp = 4'b0010;
+	defparam	b2v_inst.plus = 4'b0101;
+	defparam	b2v_inst.reset1 = 0;
+	defparam	b2v_inst.reset2 = 1;
+	defparam	b2v_inst.reset3 = 2;
+	defparam	b2v_inst.rotl = 3'b011;
+	defparam	b2v_inst.rotr = 3'b100;
+	defparam	b2v_inst.sftl = 3'b001;
+	defparam	b2v_inst.sftpass = 3'b000;
+	defparam	b2v_inst.sftr = 3'b010;
+	defparam	b2v_inst.sub = 4'b0110;
+	defparam	b2v_inst.xorOp = 4'b0100;
+	defparam	b2v_inst.zero = 4'b1001;
 
-assign	DataBus_ALTERA_SYNTHESIZED[15] = SYNTHESIZED_WIRE_9 ? SYNTHESIZED_WIRE_8[15] : 1'bz;
-assign	DataBus_ALTERA_SYNTHESIZED[14] = SYNTHESIZED_WIRE_9 ? SYNTHESIZED_WIRE_8[14] : 1'bz;
-assign	DataBus_ALTERA_SYNTHESIZED[13] = SYNTHESIZED_WIRE_9 ? SYNTHESIZED_WIRE_8[13] : 1'bz;
-assign	DataBus_ALTERA_SYNTHESIZED[12] = SYNTHESIZED_WIRE_9 ? SYNTHESIZED_WIRE_8[12] : 1'bz;
-assign	DataBus_ALTERA_SYNTHESIZED[11] = SYNTHESIZED_WIRE_9 ? SYNTHESIZED_WIRE_8[11] : 1'bz;
-assign	DataBus_ALTERA_SYNTHESIZED[10] = SYNTHESIZED_WIRE_9 ? SYNTHESIZED_WIRE_8[10] : 1'bz;
-assign	DataBus_ALTERA_SYNTHESIZED[9] = SYNTHESIZED_WIRE_9 ? SYNTHESIZED_WIRE_8[9] : 1'bz;
-assign	DataBus_ALTERA_SYNTHESIZED[8] = SYNTHESIZED_WIRE_9 ? SYNTHESIZED_WIRE_8[8] : 1'bz;
-assign	DataBus_ALTERA_SYNTHESIZED[7] = SYNTHESIZED_WIRE_9 ? SYNTHESIZED_WIRE_8[7] : 1'bz;
-assign	DataBus_ALTERA_SYNTHESIZED[6] = SYNTHESIZED_WIRE_9 ? SYNTHESIZED_WIRE_8[6] : 1'bz;
-assign	DataBus_ALTERA_SYNTHESIZED[5] = SYNTHESIZED_WIRE_9 ? SYNTHESIZED_WIRE_8[5] : 1'bz;
-assign	DataBus_ALTERA_SYNTHESIZED[4] = SYNTHESIZED_WIRE_9 ? SYNTHESIZED_WIRE_8[4] : 1'bz;
-assign	DataBus_ALTERA_SYNTHESIZED[3] = SYNTHESIZED_WIRE_9 ? SYNTHESIZED_WIRE_8[3] : 1'bz;
-assign	DataBus_ALTERA_SYNTHESIZED[2] = SYNTHESIZED_WIRE_9 ? SYNTHESIZED_WIRE_8[2] : 1'bz;
-assign	DataBus_ALTERA_SYNTHESIZED[1] = SYNTHESIZED_WIRE_9 ? SYNTHESIZED_WIRE_8[1] : 1'bz;
-assign	DataBus_ALTERA_SYNTHESIZED[0] = SYNTHESIZED_WIRE_9 ? SYNTHESIZED_WIRE_8[0] : 1'bz;
-
-assign	DataBus_ALTERA_SYNTHESIZED[15] = SYNTHESIZED_WIRE_11 ? SYNTHESIZED_WIRE_10[15] : 1'bz;
-assign	DataBus_ALTERA_SYNTHESIZED[14] = SYNTHESIZED_WIRE_11 ? SYNTHESIZED_WIRE_10[14] : 1'bz;
-assign	DataBus_ALTERA_SYNTHESIZED[13] = SYNTHESIZED_WIRE_11 ? SYNTHESIZED_WIRE_10[13] : 1'bz;
-assign	DataBus_ALTERA_SYNTHESIZED[12] = SYNTHESIZED_WIRE_11 ? SYNTHESIZED_WIRE_10[12] : 1'bz;
-assign	DataBus_ALTERA_SYNTHESIZED[11] = SYNTHESIZED_WIRE_11 ? SYNTHESIZED_WIRE_10[11] : 1'bz;
-assign	DataBus_ALTERA_SYNTHESIZED[10] = SYNTHESIZED_WIRE_11 ? SYNTHESIZED_WIRE_10[10] : 1'bz;
-assign	DataBus_ALTERA_SYNTHESIZED[9] = SYNTHESIZED_WIRE_11 ? SYNTHESIZED_WIRE_10[9] : 1'bz;
-assign	DataBus_ALTERA_SYNTHESIZED[8] = SYNTHESIZED_WIRE_11 ? SYNTHESIZED_WIRE_10[8] : 1'bz;
-assign	DataBus_ALTERA_SYNTHESIZED[7] = SYNTHESIZED_WIRE_11 ? SYNTHESIZED_WIRE_10[7] : 1'bz;
-assign	DataBus_ALTERA_SYNTHESIZED[6] = SYNTHESIZED_WIRE_11 ? SYNTHESIZED_WIRE_10[6] : 1'bz;
-assign	DataBus_ALTERA_SYNTHESIZED[5] = SYNTHESIZED_WIRE_11 ? SYNTHESIZED_WIRE_10[5] : 1'bz;
-assign	DataBus_ALTERA_SYNTHESIZED[4] = SYNTHESIZED_WIRE_11 ? SYNTHESIZED_WIRE_10[4] : 1'bz;
-assign	DataBus_ALTERA_SYNTHESIZED[3] = SYNTHESIZED_WIRE_11 ? SYNTHESIZED_WIRE_10[3] : 1'bz;
-assign	DataBus_ALTERA_SYNTHESIZED[2] = SYNTHESIZED_WIRE_11 ? SYNTHESIZED_WIRE_10[2] : 1'bz;
-assign	DataBus_ALTERA_SYNTHESIZED[1] = SYNTHESIZED_WIRE_11 ? SYNTHESIZED_WIRE_10[1] : 1'bz;
-assign	DataBus_ALTERA_SYNTHESIZED[0] = SYNTHESIZED_WIRE_11 ? SYNTHESIZED_WIRE_10[0] : 1'bz;
+assign	SYNTHESIZED_WIRE_3 = T2 & SYNTHESIZED_WIRE_8;
 
 
-addrReg	b2v_inst17(
-	.CLK(T2),
-	.rst(RST),
-	.load(SYNTHESIZED_WIRE_12),
-	.d(DataBus_ALTERA_SYNTHESIZED),
-	.addrout(AddressBus)
-	);
+REG_AR7	b2v_inst11(
+	.CLK(SYNTHESIZED_WIRE_9),
+	.data(DataBus_ALTERA_SYNTHESIZED),
+	.sel(SYNTHESIZED_WIRE_10),
+	.q(SYNTHESIZED_WIRE_1));
+
+assign	SYNTHESIZED_WIRE_9 = T2 & SYNTHESIZED_WIRE_11;
+
+assign	DataBus_ALTERA_SYNTHESIZED[15] = SYNTHESIZED_WIRE_13 ? SYNTHESIZED_WIRE_12[15] : 1'bz;
+assign	DataBus_ALTERA_SYNTHESIZED[14] = SYNTHESIZED_WIRE_13 ? SYNTHESIZED_WIRE_12[14] : 1'bz;
+assign	DataBus_ALTERA_SYNTHESIZED[13] = SYNTHESIZED_WIRE_13 ? SYNTHESIZED_WIRE_12[13] : 1'bz;
+assign	DataBus_ALTERA_SYNTHESIZED[12] = SYNTHESIZED_WIRE_13 ? SYNTHESIZED_WIRE_12[12] : 1'bz;
+assign	DataBus_ALTERA_SYNTHESIZED[11] = SYNTHESIZED_WIRE_13 ? SYNTHESIZED_WIRE_12[11] : 1'bz;
+assign	DataBus_ALTERA_SYNTHESIZED[10] = SYNTHESIZED_WIRE_13 ? SYNTHESIZED_WIRE_12[10] : 1'bz;
+assign	DataBus_ALTERA_SYNTHESIZED[9] = SYNTHESIZED_WIRE_13 ? SYNTHESIZED_WIRE_12[9] : 1'bz;
+assign	DataBus_ALTERA_SYNTHESIZED[8] = SYNTHESIZED_WIRE_13 ? SYNTHESIZED_WIRE_12[8] : 1'bz;
+assign	DataBus_ALTERA_SYNTHESIZED[7] = SYNTHESIZED_WIRE_13 ? SYNTHESIZED_WIRE_12[7] : 1'bz;
+assign	DataBus_ALTERA_SYNTHESIZED[6] = SYNTHESIZED_WIRE_13 ? SYNTHESIZED_WIRE_12[6] : 1'bz;
+assign	DataBus_ALTERA_SYNTHESIZED[5] = SYNTHESIZED_WIRE_13 ? SYNTHESIZED_WIRE_12[5] : 1'bz;
+assign	DataBus_ALTERA_SYNTHESIZED[4] = SYNTHESIZED_WIRE_13 ? SYNTHESIZED_WIRE_12[4] : 1'bz;
+assign	DataBus_ALTERA_SYNTHESIZED[3] = SYNTHESIZED_WIRE_13 ? SYNTHESIZED_WIRE_12[3] : 1'bz;
+assign	DataBus_ALTERA_SYNTHESIZED[2] = SYNTHESIZED_WIRE_13 ? SYNTHESIZED_WIRE_12[2] : 1'bz;
+assign	DataBus_ALTERA_SYNTHESIZED[1] = SYNTHESIZED_WIRE_13 ? SYNTHESIZED_WIRE_12[1] : 1'bz;
+assign	DataBus_ALTERA_SYNTHESIZED[0] = SYNTHESIZED_WIRE_13 ? SYNTHESIZED_WIRE_12[0] : 1'bz;
+
+assign	DataBus_ALTERA_SYNTHESIZED[15] = SYNTHESIZED_WIRE_15 ? SYNTHESIZED_WIRE_14[15] : 1'bz;
+assign	DataBus_ALTERA_SYNTHESIZED[14] = SYNTHESIZED_WIRE_15 ? SYNTHESIZED_WIRE_14[14] : 1'bz;
+assign	DataBus_ALTERA_SYNTHESIZED[13] = SYNTHESIZED_WIRE_15 ? SYNTHESIZED_WIRE_14[13] : 1'bz;
+assign	DataBus_ALTERA_SYNTHESIZED[12] = SYNTHESIZED_WIRE_15 ? SYNTHESIZED_WIRE_14[12] : 1'bz;
+assign	DataBus_ALTERA_SYNTHESIZED[11] = SYNTHESIZED_WIRE_15 ? SYNTHESIZED_WIRE_14[11] : 1'bz;
+assign	DataBus_ALTERA_SYNTHESIZED[10] = SYNTHESIZED_WIRE_15 ? SYNTHESIZED_WIRE_14[10] : 1'bz;
+assign	DataBus_ALTERA_SYNTHESIZED[9] = SYNTHESIZED_WIRE_15 ? SYNTHESIZED_WIRE_14[9] : 1'bz;
+assign	DataBus_ALTERA_SYNTHESIZED[8] = SYNTHESIZED_WIRE_15 ? SYNTHESIZED_WIRE_14[8] : 1'bz;
+assign	DataBus_ALTERA_SYNTHESIZED[7] = SYNTHESIZED_WIRE_15 ? SYNTHESIZED_WIRE_14[7] : 1'bz;
+assign	DataBus_ALTERA_SYNTHESIZED[6] = SYNTHESIZED_WIRE_15 ? SYNTHESIZED_WIRE_14[6] : 1'bz;
+assign	DataBus_ALTERA_SYNTHESIZED[5] = SYNTHESIZED_WIRE_15 ? SYNTHESIZED_WIRE_14[5] : 1'bz;
+assign	DataBus_ALTERA_SYNTHESIZED[4] = SYNTHESIZED_WIRE_15 ? SYNTHESIZED_WIRE_14[4] : 1'bz;
+assign	DataBus_ALTERA_SYNTHESIZED[3] = SYNTHESIZED_WIRE_15 ? SYNTHESIZED_WIRE_14[3] : 1'bz;
+assign	DataBus_ALTERA_SYNTHESIZED[2] = SYNTHESIZED_WIRE_15 ? SYNTHESIZED_WIRE_14[2] : 1'bz;
+assign	DataBus_ALTERA_SYNTHESIZED[1] = SYNTHESIZED_WIRE_15 ? SYNTHESIZED_WIRE_14[1] : 1'bz;
+assign	DataBus_ALTERA_SYNTHESIZED[0] = SYNTHESIZED_WIRE_15 ? SYNTHESIZED_WIRE_14[0] : 1'bz;
 
 
 memory_ram	b2v_inst18(
 	.clock(T1),
-	.wren(SYNTHESIZED_WIRE_13),
+	.wren(SYNTHESIZED_WIRE_16),
 	.address(AddressBus),
 	.data(DataBus_ALTERA_SYNTHESIZED),
-	.q(SYNTHESIZED_WIRE_10));
+	.q(SYNTHESIZED_WIRE_14));
 
 
 instrReg	b2v_inst2(
-	.CLK(SYNTHESIZED_WIRE_14),
+	.CLK(SYNTHESIZED_WIRE_17),
 	.a(DataBus_ALTERA_SYNTHESIZED),
-	.instrout(SYNTHESIZED_WIRE_0));
+	.instrout(SYNTHESIZED_WIRE_7));
 
 
 clkstep	b2v_inst3(
 	.CLK(CLK),
 	.STEP(STEP),
 	.T1(T1),
-	.T2(T2),
-//测试
-	.test_T1(test_T1),
-	.test_T2(test_T2));
+	.T2(T2));
 
-assign	SYNTHESIZED_WIRE_14 = T2 & SYNTHESIZED_WIRE_15;
+assign	SYNTHESIZED_WIRE_17 = T2 & SYNTHESIZED_WIRE_18;
 
 
 workReg	b2v_inst6(
 	.CLK(T1),
 	.rst(RST),
-	.load(SYNTHESIZED_WIRE_16),
+	.load(SYNTHESIZED_WIRE_19),
 	.d(DataBus_ALTERA_SYNTHESIZED),
-	.q(SYNTHESIZED_WIRE_18));
+	.q(SYNTHESIZED_WIRE_21));
 
 
 ALU	b2v_inst7(
 	.databus(DataBus_ALTERA_SYNTHESIZED),
-	.sel(SYNTHESIZED_WIRE_17),
-	.workregout(SYNTHESIZED_WIRE_18),
-	.aluout(SYNTHESIZED_WIRE_19)
-//测试
-	//.test_aluout(test_aluout)
-	);
+	.sel(SYNTHESIZED_WIRE_20),
+	.workregout(SYNTHESIZED_WIRE_21),
+	.aluout(SYNTHESIZED_WIRE_22));
 	defparam	b2v_inst7.alupass = 0;
 	defparam	b2v_inst7.andOp = 1;
 	defparam	b2v_inst7.dec = 8;
@@ -268,12 +257,9 @@ ALU	b2v_inst7(
 
 
 shiftReg	b2v_inst8(
-	.a(SYNTHESIZED_WIRE_19),
-	.sel(SYNTHESIZED_WIRE_20),
-	.y(SYNTHESIZED_WIRE_23)
-//测试
-	//.test_shiftReg(test_shiftReg)
-	);
+	.a(SYNTHESIZED_WIRE_22),
+	.sel(SYNTHESIZED_WIRE_23),
+	.y(SYNTHESIZED_WIRE_4));
 	defparam	b2v_inst8.rotl = 3;
 	defparam	b2v_inst8.rotr = 4;
 	defparam	b2v_inst8.sftl = 1;
@@ -281,15 +267,12 @@ shiftReg	b2v_inst8(
 	defparam	b2v_inst8.sftr = 2;
 
 
-buffer	b2v_inst9(
-	.CLK(SYNTHESIZED_WIRE_21),
-	.en(SYNTHESIZED_WIRE_22),
+programReg	b2v_programReg(
+	.CLK(T1),
 	.rst(RST),
-	.a(SYNTHESIZED_WIRE_23),
-	.q(DataBus_ALTERA_SYNTHESIZED),
-//测试
-	.test_buffer(test_buffer)
-	);
+	.load(SYNTHESIZED_WIRE_24),
+	.d(DataBus_ALTERA_SYNTHESIZED),
+	.q(SYNTHESIZED_WIRE_12));
 
 assign	DataBus = DataBus_ALTERA_SYNTHESIZED;
 

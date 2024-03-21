@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CPU16bit
-Tue Mar 19 10:11:21 2024
+Wed Mar 20 19:41:10 2024
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
 
 
@@ -18,20 +18,21 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
  10. State Machine - |CPU16bit|Contrlblock:b2v_inst|current_state
  11. User-Specified and Inferred Latches
  12. Registers Removed During Synthesis
- 13. General Register Statistics
- 14. Inverted Register Statistics
- 15. Multiplexer Restructuring Statistics (Restructuring Performed)
- 16. Source assignments for memory_ram:b2v_inst18|altsyncram:altsyncram_component|altsyncram_62j1:auto_generated|altsyncram_va92:altsyncram1
- 17. Parameter Settings for User Entity Instance: Contrlblock:b2v_inst
- 18. Parameter Settings for User Entity Instance: memory_ram:b2v_inst18|altsyncram:altsyncram_component
- 19. Parameter Settings for User Entity Instance: ALU:b2v_inst7
- 20. Parameter Settings for User Entity Instance: shiftReg:b2v_inst8
- 21. altsyncram Parameter Settings by Entity Instance
- 22. Port Connectivity Checks: "addrReg:b2v_inst17"
- 23. In-System Memory Content Editor Settings
- 24. Elapsed Time Per Partition
- 25. Analysis & Synthesis Messages
- 26. Analysis & Synthesis Suppressed Messages
+ 13. Removed Registers Triggering Further Register Optimizations
+ 14. General Register Statistics
+ 15. Inverted Register Statistics
+ 16. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 17. Source assignments for memory_ram:b2v_inst18|altsyncram:altsyncram_component|altsyncram_62j1:auto_generated|altsyncram_va92:altsyncram1
+ 18. Parameter Settings for User Entity Instance: Contrlblock:b2v_inst
+ 19. Parameter Settings for User Entity Instance: memory_ram:b2v_inst18|altsyncram:altsyncram_component
+ 20. Parameter Settings for User Entity Instance: ALU:b2v_inst7
+ 21. Parameter Settings for User Entity Instance: shiftReg:b2v_inst8
+ 22. altsyncram Parameter Settings by Entity Instance
+ 23. Port Connectivity Checks: "addrReg:b2v_addrReg"
+ 24. In-System Memory Content Editor Settings
+ 25. Elapsed Time Per Partition
+ 26. Analysis & Synthesis Messages
+ 27. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -57,16 +58,16 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Mar 19 10:11:21 2024       ;
+; Analysis & Synthesis Status        ; Successful - Wed Mar 20 19:41:10 2024       ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Full Version ;
 ; Revision Name                      ; CPU16bit                                    ;
 ; Top-level Entity Name              ; CPU16bit                                    ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 654                                         ;
-;     Total combinational functions  ; 451                                         ;
-;     Dedicated logic registers      ; 339                                         ;
-; Total registers                    ; 339                                         ;
-; Total pins                         ; 74                                          ;
+; Total logic elements               ; 351                                         ;
+;     Total combinational functions  ; 306                                         ;
+;     Dedicated logic registers      ; 181                                         ;
+; Total registers                    ; 181                                         ;
+; Total pins                         ; 35                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 2,048                                       ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -170,49 +171,48 @@ applicable agreement for further details.
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 2           ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ; < 0.1%      ;
-;     Processors 3-16        ;   0.0%      ;
+;     Processors 2-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                        ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                              ; Library ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------+---------+
-; instrReg.v                       ; yes             ; User Verilog HDL File              ; D:/QuatusIIProject/CPU16bit/instrReg.v                                    ;         ;
-; workReg.v                        ; yes             ; User Verilog HDL File              ; D:/QuatusIIProject/CPU16bit/workReg.v                                     ;         ;
-; ALU.v                            ; yes             ; User Verilog HDL File              ; D:/QuatusIIProject/CPU16bit/ALU.v                                         ;         ;
-; shiftReg.v                       ; yes             ; User Verilog HDL File              ; D:/QuatusIIProject/CPU16bit/shiftReg.v                                    ;         ;
-; REG_AR7.v                        ; yes             ; User Verilog HDL File              ; D:/QuatusIIProject/CPU16bit/REG_AR7.v                                     ;         ;
-; programReg.v                     ; yes             ; User Verilog HDL File              ; D:/QuatusIIProject/CPU16bit/programReg.v                                  ;         ;
-; addrReg.v                        ; yes             ; User Verilog HDL File              ; D:/QuatusIIProject/CPU16bit/addrReg.v                                     ;         ;
-; memory_ram.v                     ; yes             ; User Wizard-Generated File         ; D:/QuatusIIProject/CPU16bit/memory_ram.v                                  ;         ;
-; buffer.v                         ; yes             ; User Verilog HDL File              ; D:/QuatusIIProject/CPU16bit/buffer.v                                      ;         ;
-; DATA7X16.mif                     ; yes             ; User Memory Initialization File    ; D:/QuatusIIProject/CPU16bit/DATA7X16.mif                                  ;         ;
-; Contrlblock.v                    ; yes             ; User Verilog HDL File              ; D:/QuatusIIProject/CPU16bit/Contrlblock.v                                 ;         ;
-; CPU16bit.v                       ; yes             ; User Verilog HDL File              ; D:/QuatusIIProject/CPU16bit/CPU16bit.v                                    ;         ;
-; clkstep.bdf                      ; yes             ; User Block Diagram/Schematic File  ; D:/QuatusIIProject/CPU16bit/clkstep.bdf                                   ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                       ; d:/quatusii/install/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                       ; d:/quatusii/install/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                       ; d:/quatusii/install/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                       ; d:/quatusii/install/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
-; aglobal131.inc                   ; yes             ; Megafunction                       ; d:/quatusii/install/quartus/libraries/megafunctions/aglobal131.inc        ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                       ; d:/quatusii/install/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
-; altrom.inc                       ; yes             ; Megafunction                       ; d:/quatusii/install/quartus/libraries/megafunctions/altrom.inc            ;         ;
-; altram.inc                       ; yes             ; Megafunction                       ; d:/quatusii/install/quartus/libraries/megafunctions/altram.inc            ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                       ; d:/quatusii/install/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_62j1.tdf           ; yes             ; Auto-Generated Megafunction        ; D:/QuatusIIProject/CPU16bit/db/altsyncram_62j1.tdf                        ;         ;
-; db/altsyncram_va92.tdf           ; yes             ; Auto-Generated Megafunction        ; D:/QuatusIIProject/CPU16bit/db/altsyncram_va92.tdf                        ;         ;
-; sld_mod_ram_rom.vhd              ; yes             ; Encrypted Megafunction             ; d:/quatusii/install/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd   ;         ;
-; sld_rom_sr.vhd                   ; yes             ; Encrypted Megafunction             ; d:/quatusii/install/quartus/libraries/megafunctions/sld_rom_sr.vhd        ;         ;
-; sld_hub.vhd                      ; yes             ; Encrypted Megafunction             ; d:/quatusii/install/quartus/libraries/megafunctions/sld_hub.vhd           ;         ;
-; sld_jtag_hub.vhd                 ; yes             ; Encrypted Megafunction             ; d:/quatusii/install/quartus/libraries/megafunctions/sld_jtag_hub.vhd      ;         ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                      ;
++----------------------------------+-----------------+----------------------------------+---------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                        ; File Name with Absolute Path                                              ; Library ;
++----------------------------------+-----------------+----------------------------------+---------------------------------------------------------------------------+---------+
+; instrReg.v                       ; yes             ; User Verilog HDL File            ; D:/QuatusIIProject/CPU16bit/instrReg.v                                    ;         ;
+; workReg.v                        ; yes             ; User Verilog HDL File            ; D:/QuatusIIProject/CPU16bit/workReg.v                                     ;         ;
+; ALU.v                            ; yes             ; User Verilog HDL File            ; D:/QuatusIIProject/CPU16bit/ALU.v                                         ;         ;
+; shiftReg.v                       ; yes             ; User Verilog HDL File            ; D:/QuatusIIProject/CPU16bit/shiftReg.v                                    ;         ;
+; REG_AR7.v                        ; yes             ; User Verilog HDL File            ; D:/QuatusIIProject/CPU16bit/REG_AR7.v                                     ;         ;
+; programReg.v                     ; yes             ; User Verilog HDL File            ; D:/QuatusIIProject/CPU16bit/programReg.v                                  ;         ;
+; addrReg.v                        ; yes             ; User Verilog HDL File            ; D:/QuatusIIProject/CPU16bit/addrReg.v                                     ;         ;
+; memory_ram.v                     ; yes             ; User Wizard-Generated File       ; D:/QuatusIIProject/CPU16bit/memory_ram.v                                  ;         ;
+; buffer.v                         ; yes             ; User Verilog HDL File            ; D:/QuatusIIProject/CPU16bit/buffer.v                                      ;         ;
+; DATA7X16.mif                     ; yes             ; User Memory Initialization File  ; D:/QuatusIIProject/CPU16bit/DATA7X16.mif                                  ;         ;
+; Contrlblock.v                    ; yes             ; User Verilog HDL File            ; D:/QuatusIIProject/CPU16bit/Contrlblock.v                                 ;         ;
+; CPU16bit.v                       ; yes             ; User Verilog HDL File            ; D:/QuatusIIProject/CPU16bit/CPU16bit.v                                    ;         ;
+; clkstep.v                        ; yes             ; User Verilog HDL File            ; D:/QuatusIIProject/CPU16bit/clkstep.v                                     ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                     ; d:/quatusii/install/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                     ; d:/quatusii/install/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                     ; d:/quatusii/install/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                     ; d:/quatusii/install/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal131.inc                   ; yes             ; Megafunction                     ; d:/quatusii/install/quartus/libraries/megafunctions/aglobal131.inc        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                     ; d:/quatusii/install/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                     ; d:/quatusii/install/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                       ; yes             ; Megafunction                     ; d:/quatusii/install/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                     ; d:/quatusii/install/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_62j1.tdf           ; yes             ; Auto-Generated Megafunction      ; D:/QuatusIIProject/CPU16bit/db/altsyncram_62j1.tdf                        ;         ;
+; db/altsyncram_va92.tdf           ; yes             ; Auto-Generated Megafunction      ; D:/QuatusIIProject/CPU16bit/db/altsyncram_va92.tdf                        ;         ;
+; sld_mod_ram_rom.vhd              ; yes             ; Encrypted Megafunction           ; d:/quatusii/install/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd   ;         ;
+; sld_rom_sr.vhd                   ; yes             ; Encrypted Megafunction           ; d:/quatusii/install/quartus/libraries/megafunctions/sld_rom_sr.vhd        ;         ;
+; sld_hub.vhd                      ; yes             ; Encrypted Megafunction           ; d:/quatusii/install/quartus/libraries/megafunctions/sld_hub.vhd           ;         ;
+; sld_jtag_hub.vhd                 ; yes             ; Encrypted Megafunction           ; d:/quatusii/install/quartus/libraries/megafunctions/sld_jtag_hub.vhd      ;         ;
++----------------------------------+-----------------+----------------------------------+---------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------------------------+
@@ -220,29 +220,29 @@ applicable agreement for further details.
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Estimated Total logic elements              ; 654                      ;
+; Estimated Total logic elements              ; 351                      ;
 ;                                             ;                          ;
-; Total combinational functions               ; 451                      ;
+; Total combinational functions               ; 306                      ;
 ; Logic element usage by number of LUT inputs ;                          ;
-;     -- 4 input functions                    ; 238                      ;
-;     -- 3 input functions                    ; 126                      ;
-;     -- <=2 input functions                  ; 87                       ;
+;     -- 4 input functions                    ; 133                      ;
+;     -- 3 input functions                    ; 59                       ;
+;     -- <=2 input functions                  ; 114                      ;
 ;                                             ;                          ;
 ; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 414                      ;
+;     -- normal mode                          ; 269                      ;
 ;     -- arithmetic mode                      ; 37                       ;
 ;                                             ;                          ;
-; Total registers                             ; 339                      ;
-;     -- Dedicated logic registers            ; 339                      ;
+; Total registers                             ; 181                      ;
+;     -- Dedicated logic registers            ; 181                      ;
 ;     -- I/O registers                        ; 0                        ;
 ;                                             ;                          ;
-; I/O pins                                    ; 74                       ;
+; I/O pins                                    ; 35                       ;
 ; Total memory bits                           ; 2048                     ;
 ; Embedded Multiplier 9-bit elements          ; 0                        ;
 ; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
 ; Maximum fan-out                             ; 163                      ;
-; Total fan-out                               ; 3066                     ;
-; Average fan-out                             ; 3.18                     ;
+; Total fan-out                               ; 1942                     ;
+; Average fan-out                             ; 3.34                     ;
 +---------------------------------------------+--------------------------+
 
 
@@ -251,26 +251,24 @@ applicable agreement for further details.
 +---------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                          ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                         ; Library Name ;
 +---------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |CPU16bit                                                           ; 451 (36)          ; 339 (0)      ; 2048        ; 0            ; 0       ; 0         ; 74   ; 0            ; |CPU16bit                                                                                                                                                                   ; work         ;
-;    |ALU:b2v_inst7|                                                  ; 64 (64)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU16bit|ALU:b2v_inst7                                                                                                                                                     ; work         ;
-;    |Contrlblock:b2v_inst|                                           ; 37 (37)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU16bit|Contrlblock:b2v_inst                                                                                                                                              ; work         ;
-;    |REG_AR7:b2v_inst11|                                             ; 72 (72)           ; 128 (128)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU16bit|REG_AR7:b2v_inst11                                                                                                                                                ; work         ;
-;    |addrReg:b2v_inst17|                                             ; 0 (0)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU16bit|addrReg:b2v_inst17                                                                                                                                                ; work         ;
-;    |buffer:b2v_inst9|                                               ; 49 (49)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU16bit|buffer:b2v_inst9                                                                                                                                                  ; work         ;
+; |CPU16bit                                                           ; 306 (68)          ; 181 (0)      ; 2048        ; 0            ; 0       ; 0         ; 35   ; 0            ; |CPU16bit                                                                                                                                                                   ; work         ;
+;    |ALU:b2v_inst7|                                                  ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU16bit|ALU:b2v_inst7                                                                                                                                                     ; work         ;
+;    |Contrlblock:b2v_inst|                                           ; 15 (15)           ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU16bit|Contrlblock:b2v_inst                                                                                                                                              ; work         ;
+;    |addrReg:b2v_addrReg|                                            ; 0 (0)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU16bit|addrReg:b2v_addrReg                                                                                                                                               ; work         ;
+;    |buffer:b2v_buffer|                                              ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU16bit|buffer:b2v_buffer                                                                                                                                                 ; work         ;
 ;    |clkstep:b2v_inst3|                                              ; 2 (2)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU16bit|clkstep:b2v_inst3                                                                                                                                                 ; work         ;
-;    |instrReg:b2v_inst2|                                             ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU16bit|instrReg:b2v_inst2                                                                                                                                                ; work         ;
-;    |memory_ram:b2v_inst18|                                          ; 75 (0)            ; 43 (0)       ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU16bit|memory_ram:b2v_inst18                                                                                                                                             ; work         ;
-;       |altsyncram:altsyncram_component|                             ; 75 (0)            ; 43 (0)       ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU16bit|memory_ram:b2v_inst18|altsyncram:altsyncram_component                                                                                                             ; work         ;
-;          |altsyncram_62j1:auto_generated|                           ; 75 (0)            ; 43 (0)       ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU16bit|memory_ram:b2v_inst18|altsyncram:altsyncram_component|altsyncram_62j1:auto_generated                                                                              ; work         ;
+;    |instrReg:b2v_inst2|                                             ; 0 (0)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU16bit|instrReg:b2v_inst2                                                                                                                                                ; work         ;
+;    |memory_ram:b2v_inst18|                                          ; 74 (0)            ; 43 (0)       ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU16bit|memory_ram:b2v_inst18                                                                                                                                             ; work         ;
+;       |altsyncram:altsyncram_component|                             ; 74 (0)            ; 43 (0)       ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU16bit|memory_ram:b2v_inst18|altsyncram:altsyncram_component                                                                                                             ; work         ;
+;          |altsyncram_62j1:auto_generated|                           ; 74 (0)            ; 43 (0)       ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU16bit|memory_ram:b2v_inst18|altsyncram:altsyncram_component|altsyncram_62j1:auto_generated                                                                              ; work         ;
 ;             |altsyncram_va92:altsyncram1|                           ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU16bit|memory_ram:b2v_inst18|altsyncram:altsyncram_component|altsyncram_62j1:auto_generated|altsyncram_va92:altsyncram1                                                  ; work         ;
-;             |sld_mod_ram_rom:mgl_prim2|                             ; 75 (51)           ; 43 (34)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU16bit|memory_ram:b2v_inst18|altsyncram:altsyncram_component|altsyncram_62j1:auto_generated|sld_mod_ram_rom:mgl_prim2                                                    ; work         ;
+;             |sld_mod_ram_rom:mgl_prim2|                             ; 74 (50)           ; 43 (34)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU16bit|memory_ram:b2v_inst18|altsyncram:altsyncram_component|altsyncram_62j1:auto_generated|sld_mod_ram_rom:mgl_prim2                                                    ; work         ;
 ;                |sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr| ; 24 (24)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU16bit|memory_ram:b2v_inst18|altsyncram:altsyncram_component|altsyncram_62j1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr ; work         ;
-;    |programReg:b2v_inst14|                                          ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU16bit|programReg:b2v_inst14                                                                                                                                             ; work         ;
-;    |sld_hub:auto_hub|                                               ; 116 (1)           ; 80 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU16bit|sld_hub:auto_hub                                                                                                                                                  ; work         ;
-;       |sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|                ; 115 (78)          ; 80 (52)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU16bit|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst                                                                                                     ; work         ;
+;    |programReg:b2v_programReg|                                      ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU16bit|programReg:b2v_programReg                                                                                                                                         ; work         ;
+;    |sld_hub:auto_hub|                                               ; 115 (1)           ; 80 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU16bit|sld_hub:auto_hub                                                                                                                                                  ; work         ;
+;       |sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|                ; 114 (77)          ; 80 (52)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU16bit|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst                                                                                                     ; work         ;
 ;          |sld_rom_sr:hub_info_reg|                                  ; 20 (20)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU16bit|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg                                                                             ; work         ;
 ;          |sld_shadow_jsm:shadow_jsm|                                ; 17 (17)           ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU16bit|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm                                                                           ; work         ;
-;    |workReg:b2v_inst6|                                              ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU16bit|workReg:b2v_inst6                                                                                                                                                 ; work         ;
 +---------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -294,56 +292,199 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 Encoding Type:  One-Hot
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |CPU16bit|Contrlblock:b2v_inst|current_state                                                                                                                                                                                                                                                                                 ;
-+-----------------------+-------------------+-------------------+-------------------+---------------------+---------------------+---------------------+----------------------+----------------------+----------------------+----------------------+-----------------------+----------------------+----------------------+----------------------+
-; Name                  ; current_state.ld3 ; current_state.ld2 ; current_state.ld1 ; current_state.adds3 ; current_state.adds2 ; current_state.adds1 ; current_state.incPC4 ; current_state.incPC3 ; current_state.incPC2 ; current_state.incPC1 ; current_state.execute ; current_state.reset3 ; current_state.reset2 ; current_state.reset1 ;
-+-----------------------+-------------------+-------------------+-------------------+---------------------+---------------------+---------------------+----------------------+----------------------+----------------------+----------------------+-----------------------+----------------------+----------------------+----------------------+
-; current_state.reset1  ; 0                 ; 0                 ; 0                 ; 0                   ; 0                   ; 0                   ; 0                    ; 0                    ; 0                    ; 0                    ; 0                     ; 0                    ; 0                    ; 0                    ;
-; current_state.reset2  ; 0                 ; 0                 ; 0                 ; 0                   ; 0                   ; 0                   ; 0                    ; 0                    ; 0                    ; 0                    ; 0                     ; 0                    ; 1                    ; 1                    ;
-; current_state.reset3  ; 0                 ; 0                 ; 0                 ; 0                   ; 0                   ; 0                   ; 0                    ; 0                    ; 0                    ; 0                    ; 0                     ; 1                    ; 0                    ; 1                    ;
-; current_state.execute ; 0                 ; 0                 ; 0                 ; 0                   ; 0                   ; 0                   ; 0                    ; 0                    ; 0                    ; 0                    ; 1                     ; 0                    ; 0                    ; 1                    ;
-; current_state.incPC1  ; 0                 ; 0                 ; 0                 ; 0                   ; 0                   ; 0                   ; 0                    ; 0                    ; 0                    ; 1                    ; 0                     ; 0                    ; 0                    ; 1                    ;
-; current_state.incPC2  ; 0                 ; 0                 ; 0                 ; 0                   ; 0                   ; 0                   ; 0                    ; 0                    ; 1                    ; 0                    ; 0                     ; 0                    ; 0                    ; 1                    ;
-; current_state.incPC3  ; 0                 ; 0                 ; 0                 ; 0                   ; 0                   ; 0                   ; 0                    ; 1                    ; 0                    ; 0                    ; 0                     ; 0                    ; 0                    ; 1                    ;
-; current_state.incPC4  ; 0                 ; 0                 ; 0                 ; 0                   ; 0                   ; 0                   ; 1                    ; 0                    ; 0                    ; 0                    ; 0                     ; 0                    ; 0                    ; 1                    ;
-; current_state.adds1   ; 0                 ; 0                 ; 0                 ; 0                   ; 0                   ; 1                   ; 0                    ; 0                    ; 0                    ; 0                    ; 0                     ; 0                    ; 0                    ; 1                    ;
-; current_state.adds2   ; 0                 ; 0                 ; 0                 ; 0                   ; 1                   ; 0                   ; 0                    ; 0                    ; 0                    ; 0                    ; 0                     ; 0                    ; 0                    ; 1                    ;
-; current_state.adds3   ; 0                 ; 0                 ; 0                 ; 1                   ; 0                   ; 0                   ; 0                    ; 0                    ; 0                    ; 0                    ; 0                     ; 0                    ; 0                    ; 1                    ;
-; current_state.ld1     ; 0                 ; 0                 ; 1                 ; 0                   ; 0                   ; 0                   ; 0                    ; 0                    ; 0                    ; 0                    ; 0                     ; 0                    ; 0                    ; 1                    ;
-; current_state.ld2     ; 0                 ; 1                 ; 0                 ; 0                   ; 0                   ; 0                   ; 0                    ; 0                    ; 0                    ; 0                    ; 0                     ; 0                    ; 0                    ; 1                    ;
-; current_state.ld3     ; 1                 ; 0                 ; 0                 ; 0                   ; 0                   ; 0                   ; 0                    ; 0                    ; 0                    ; 0                    ; 0                     ; 0                    ; 0                    ; 1                    ;
-+-----------------------+-------------------+-------------------+-------------------+---------------------+---------------------+---------------------+----------------------+----------------------+----------------------+----------------------+-----------------------+----------------------+----------------------+----------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |CPU16bit|Contrlblock:b2v_inst|current_state                                                                                                                                                                                                                                                           ;
++-----------------------+-------------------+-------------------+-------------------+---------------------+---------------------+----------------------+-----------------------+----------------------+----------------------+----------------------+----------------------+----------------------+----------------------+
+; Name                  ; current_state.ld3 ; current_state.ld2 ; current_state.ld1 ; current_state.adds3 ; current_state.adds2 ; current_state.incPC4 ; current_state.execute ; current_state.incPC3 ; current_state.incPC2 ; current_state.incPC1 ; current_state.reset3 ; current_state.reset2 ; current_state.reset1 ;
++-----------------------+-------------------+-------------------+-------------------+---------------------+---------------------+----------------------+-----------------------+----------------------+----------------------+----------------------+----------------------+----------------------+----------------------+
+; current_state.reset1  ; 0                 ; 0                 ; 0                 ; 0                   ; 0                   ; 0                    ; 0                     ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ;
+; current_state.reset2  ; 0                 ; 0                 ; 0                 ; 0                   ; 0                   ; 0                    ; 0                     ; 0                    ; 0                    ; 0                    ; 0                    ; 1                    ; 1                    ;
+; current_state.reset3  ; 0                 ; 0                 ; 0                 ; 0                   ; 0                   ; 0                    ; 0                     ; 0                    ; 0                    ; 0                    ; 1                    ; 0                    ; 1                    ;
+; current_state.incPC1  ; 0                 ; 0                 ; 0                 ; 0                   ; 0                   ; 0                    ; 0                     ; 0                    ; 0                    ; 1                    ; 0                    ; 0                    ; 1                    ;
+; current_state.incPC2  ; 0                 ; 0                 ; 0                 ; 0                   ; 0                   ; 0                    ; 0                     ; 0                    ; 1                    ; 0                    ; 0                    ; 0                    ; 1                    ;
+; current_state.incPC3  ; 0                 ; 0                 ; 0                 ; 0                   ; 0                   ; 0                    ; 0                     ; 1                    ; 0                    ; 0                    ; 0                    ; 0                    ; 1                    ;
+; current_state.execute ; 0                 ; 0                 ; 0                 ; 0                   ; 0                   ; 0                    ; 1                     ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 1                    ;
+; current_state.incPC4  ; 0                 ; 0                 ; 0                 ; 0                   ; 0                   ; 1                    ; 0                     ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 1                    ;
+; current_state.adds2   ; 0                 ; 0                 ; 0                 ; 0                   ; 1                   ; 0                    ; 0                     ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 1                    ;
+; current_state.adds3   ; 0                 ; 0                 ; 0                 ; 1                   ; 0                   ; 0                    ; 0                     ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 1                    ;
+; current_state.ld1     ; 0                 ; 0                 ; 1                 ; 0                   ; 0                   ; 0                    ; 0                     ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 1                    ;
+; current_state.ld2     ; 0                 ; 1                 ; 0                 ; 0                   ; 0                   ; 0                    ; 0                     ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 1                    ;
+; current_state.ld3     ; 1                 ; 0                 ; 0                 ; 0                   ; 0                   ; 0                    ; 0                     ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 1                    ;
++-----------------------+-------------------+-------------------+-------------------+---------------------+---------------------+----------------------+-----------------------+----------------------+----------------------+----------------------+----------------------+----------------------+----------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                         ;
-+----------------------------------------------------+-------------------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal           ; Free of Timing Hazards ;
-+----------------------------------------------------+-------------------------------+------------------------+
-; Contrlblock:b2v_inst|aluSel[1]                     ; Contrlblock:b2v_inst|WideOr4  ; yes                    ;
-; Contrlblock:b2v_inst|aluSel[2]                     ; Contrlblock:b2v_inst|WideOr4  ; yes                    ;
-; Contrlblock:b2v_inst|aluSel[3]                     ; Contrlblock:b2v_inst|WideOr4  ; yes                    ;
-; Contrlblock:b2v_inst|regSel[1]                     ; Contrlblock:b2v_inst|WideOr12 ; yes                    ;
-; Contrlblock:b2v_inst|regSel[0]                     ; Contrlblock:b2v_inst|WideOr12 ; yes                    ;
-; Contrlblock:b2v_inst|regSel[2]                     ; Contrlblock:b2v_inst|WideOr12 ; yes                    ;
-; Number of user-specified and inferred latches = 6  ;                               ;                        ;
-+----------------------------------------------------+-------------------------------+------------------------+
++------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                        ;
++----------------------------------------------------+------------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal          ; Free of Timing Hazards ;
++----------------------------------------------------+------------------------------+------------------------+
+; Contrlblock:b2v_inst|regSel[1]                     ; Contrlblock:b2v_inst|WideOr9 ; yes                    ;
+; Contrlblock:b2v_inst|regSel[0]                     ; Contrlblock:b2v_inst|WideOr9 ; yes                    ;
+; Contrlblock:b2v_inst|regSel[2]                     ; Contrlblock:b2v_inst|WideOr9 ; yes                    ;
+; Contrlblock:b2v_inst|aluSel[1]                     ; Contrlblock:b2v_inst|WideOr0 ; yes                    ;
+; Contrlblock:b2v_inst|aluSel[2]                     ; Contrlblock:b2v_inst|WideOr0 ; yes                    ;
+; Contrlblock:b2v_inst|aluSel[3]                     ; Contrlblock:b2v_inst|WideOr0 ; yes                    ;
+; Number of user-specified and inferred latches = 6  ;                              ;                        ;
++----------------------------------------------------+------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+------------------------------------------------------------+
-; Registers Removed During Synthesis                         ;
-+---------------------------------------+--------------------+
-; Register name                         ; Reason for Removal ;
-+---------------------------------------+--------------------+
-; Contrlblock:b2v_inst|current_state~4  ; Lost fanout        ;
-; Contrlblock:b2v_inst|current_state~5  ; Lost fanout        ;
-; Contrlblock:b2v_inst|current_state~6  ; Lost fanout        ;
-; Contrlblock:b2v_inst|current_state~7  ; Lost fanout        ;
-; Contrlblock:b2v_inst|current_state~8  ; Lost fanout        ;
-; Total Number of Removed Registers = 5 ;                    ;
-+---------------------------------------+--------------------+
++----------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                     ;
++------------------------------------------+---------------------------------------------+
+; Register name                            ; Reason for Removal                          ;
++------------------------------------------+---------------------------------------------+
+; workReg:b2v_inst6|q[0..15]               ; Stuck at GND due to stuck port clock_enable ;
+; instrReg:b2v_inst2|instrout[6..8]        ; Lost fanout                                 ;
+; Contrlblock:b2v_inst|current_state.adds2 ; Lost fanout                                 ;
+; Contrlblock:b2v_inst|current_state.adds3 ; Lost fanout                                 ;
+; Contrlblock:b2v_inst|current_state~4     ; Lost fanout                                 ;
+; Contrlblock:b2v_inst|current_state~5     ; Lost fanout                                 ;
+; Contrlblock:b2v_inst|current_state~6     ; Lost fanout                                 ;
+; Contrlblock:b2v_inst|current_state~7     ; Lost fanout                                 ;
+; Contrlblock:b2v_inst|current_state~8     ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~32            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~16            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~0             ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~48            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~80            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~96            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~64            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~112           ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~33            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~17            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~1             ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~49            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~81            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~97            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~65            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~113           ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~34            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~18            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~2             ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~50            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~82            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~98            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~66            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~114           ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~35            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~19            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~3             ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~51            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~83            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~99            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~67            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~115           ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~36            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~20            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~4             ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~52            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~84            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~100           ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~68            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~116           ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~37            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~21            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~5             ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~53            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~85            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~101           ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~69            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~117           ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~38            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~22            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~6             ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~54            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~86            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~102           ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~70            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~118           ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~39            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~23            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~7             ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~55            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~87            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~103           ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~71            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~119           ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~40            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~24            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~8             ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~56            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~88            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~104           ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~72            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~120           ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~41            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~25            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~9             ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~57            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~89            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~105           ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~73            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~121           ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~42            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~26            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~10            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~58            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~90            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~106           ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~74            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~122           ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~43            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~27            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~11            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~59            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~91            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~107           ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~75            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~123           ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~44            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~28            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~12            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~60            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~92            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~108           ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~76            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~124           ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~45            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~29            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~13            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~61            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~93            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~109           ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~77            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~125           ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~46            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~30            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~14            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~62            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~94            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~110           ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~78            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~126           ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~47            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~31            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~15            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~63            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~95            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~111           ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~79            ; Lost fanout                                 ;
+; REG_AR7:b2v_inst11|ramdata~127           ; Lost fanout                                 ;
+; instrReg:b2v_inst2|instrout[0..5]        ; Lost fanout                                 ;
+; Total Number of Removed Registers = 160  ;                                             ;
++------------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                          ;
++-------------------------------+--------------------+-----------------------------------------------------------------+
+; Register name                 ; Reason for Removal ; Registers Removed due to This Register                          ;
++-------------------------------+--------------------+-----------------------------------------------------------------+
+; REG_AR7:b2v_inst11|ramdata~32 ; Lost Fanouts       ; instrReg:b2v_inst2|instrout[4], instrReg:b2v_inst2|instrout[1], ;
+;                               ;                    ; instrReg:b2v_inst2|instrout[3], instrReg:b2v_inst2|instrout[0], ;
+;                               ;                    ; instrReg:b2v_inst2|instrout[5], instrReg:b2v_inst2|instrout[2]  ;
++-------------------------------+--------------------+-----------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -351,12 +492,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 339   ;
+; Total registers                              ; 181   ;
 ; Number of registers using Synchronous Clear  ; 33    ;
 ; Number of registers using Synchronous Load   ; 18    ;
-; Number of registers using Asynchronous Clear ; 118   ;
+; Number of registers using Asynchronous Clear ; 99    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 257   ;
+; Number of registers using Clock Enable       ; 113   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -378,19 +519,13 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |CPU16bit|memory_ram:b2v_inst18|altsyncram:altsyncram_component|altsyncram_62j1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[0]                                     ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |CPU16bit|memory_ram:b2v_inst18|altsyncram:altsyncram_component|altsyncram_62j1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[14]                                               ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |CPU16bit|memory_ram:b2v_inst18|altsyncram:altsyncram_component|altsyncram_62j1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[4]                                                ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CPU16bit|memory_ram:b2v_inst18|altsyncram:altsyncram_component|altsyncram_62j1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[2] ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |CPU16bit|memory_ram:b2v_inst18|altsyncram:altsyncram_component|altsyncram_62j1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[3]                                     ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |CPU16bit|memory_ram:b2v_inst18|altsyncram:altsyncram_component|altsyncram_62j1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[15]                                               ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |CPU16bit|memory_ram:b2v_inst18|altsyncram:altsyncram_component|altsyncram_62j1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[0]                                                ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CPU16bit|memory_ram:b2v_inst18|altsyncram:altsyncram_component|altsyncram_62j1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[4] ;
 ; 24:1               ; 4 bits    ; 64 LEs        ; 48 LEs               ; 16 LEs                 ; Yes        ; |CPU16bit|memory_ram:b2v_inst18|altsyncram:altsyncram_component|altsyncram_62j1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[2]      ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 32 LEs               ; 48 LEs                 ; Yes        ; |CPU16bit|buffer:b2v_inst9|val[3]                                                                                                                                                           ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |CPU16bit|Contrlblock:b2v_inst|Selector5                                                                                                                                                    ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |CPU16bit|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg[0]                                                                                                ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |CPU16bit|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]                                                                                                   ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CPU16bit|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[1]                                                                             ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |CPU16bit|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[2]                                                                                                         ;
-; 34:1               ; 4 bits    ; 88 LEs        ; 60 LEs               ; 28 LEs                 ; Yes        ; |CPU16bit|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[3]                                                                                                  ;
-; 20:1               ; 4 bits    ; 52 LEs        ; 32 LEs               ; 20 LEs                 ; Yes        ; |CPU16bit|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[1]                                                                                  ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 32 LEs               ; 48 LEs                 ; Yes        ; |CPU16bit|buffer:b2v_buffer|q[14]                                                                                                                                                           ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |CPU16bit|Contrlblock:b2v_inst|Selector4                                                                                                                                                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -426,14 +561,14 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; reset1         ; 0     ; Signed Integer                           ;
 ; reset2         ; 1     ; Signed Integer                           ;
 ; reset3         ; 2     ; Signed Integer                           ;
-; execute        ; 3     ; Signed Integer                           ;
-; incPC1         ; 4     ; Signed Integer                           ;
-; incPC2         ; 5     ; Signed Integer                           ;
-; incPC3         ; 6     ; Signed Integer                           ;
+; execute        ; 6     ; Signed Integer                           ;
+; incPC1         ; 3     ; Signed Integer                           ;
+; incPC2         ; 4     ; Signed Integer                           ;
+; incPC3         ; 5     ; Signed Integer                           ;
 ; incPC4         ; 7     ; Signed Integer                           ;
-; adds1          ; 8     ; Signed Integer                           ;
-; adds2          ; 9     ; Signed Integer                           ;
-; adds3          ; 10    ; Signed Integer                           ;
+; adds1          ; 7     ; Signed Integer                           ;
+; adds2          ; 8     ; Signed Integer                           ;
+; adds3          ; 9     ; Signed Integer                           ;
 ; ld1            ; 11    ; Signed Integer                           ;
 ; ld2            ; 12    ; Signed Integer                           ;
 ; ld3            ; 13    ; Signed Integer                           ;
@@ -556,7 +691,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "addrReg:b2v_inst17"                                                                                      ;
+; Port Connectivity Checks: "addrReg:b2v_addrReg"                                                                                     ;
 +------+--------+----------+----------------------------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                                                  ;
 +------+--------+----------+----------------------------------------------------------------------------------------------------------+
@@ -573,14 +708,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------------+-------+-------+------------+--------------------------------------------------------------------------------------+
 
 
-+---------------------------------+
-; Elapsed Time Per Partition      ;
-+------------------+--------------+
-; Partition Name   ; Elapsed Time ;
-+------------------+--------------+
-; Top              ; 00:00:00     ;
-; sld_hub:auto_hub ; 00:00:00     ;
-+------------------+--------------+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -589,7 +723,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Full Version
-    Info: Processing started: Tue Mar 19 10:11:19 2024
+    Info: Processing started: Wed Mar 20 19:41:08 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU16bit -c CPU16bit
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file instrreg.v
@@ -614,28 +748,27 @@ Info (12021): Found 1 design units, including 1 entities, in source file contrlb
     Info (12023): Found entity 1: Contrlblock
 Info (12021): Found 1 design units, including 1 entities, in source file cpu16bit.v
     Info (12023): Found entity 1: CPU16bit
-Info (12021): Found 1 design units, including 1 entities, in source file clkstep.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file clkstep.v
     Info (12023): Found entity 1: clkstep
-Warning (10236): Verilog HDL Implicit Net warning at CPU16bit.v(164): created implicit net for "T1"
-Warning (10236): Verilog HDL Implicit Net warning at CPU16bit.v(208): created implicit net for "T2"
 Info (12127): Elaborating entity "CPU16bit" for the top level hierarchy
+Info (12128): Elaborating entity "addrReg" for hierarchy "addrReg:b2v_addrReg"
+Info (12128): Elaborating entity "buffer" for hierarchy "buffer:b2v_buffer"
 Info (12128): Elaborating entity "Contrlblock" for hierarchy "Contrlblock:b2v_inst"
-Warning (10240): Verilog HDL Always Construct warning at Contrlblock.v(84): inferring latch(es) for variable "aluSel", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Contrlblock.v(84): inferring latch(es) for variable "shiftSel", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Contrlblock.v(84): inferring latch(es) for variable "regSel", which holds its previous value in one or more paths through the always construct
-Info (10041): Inferred latch for "regSel[0]" at Contrlblock.v(84)
-Info (10041): Inferred latch for "regSel[1]" at Contrlblock.v(84)
-Info (10041): Inferred latch for "regSel[2]" at Contrlblock.v(84)
-Info (10041): Inferred latch for "shiftSel[0]" at Contrlblock.v(84)
-Info (10041): Inferred latch for "shiftSel[1]" at Contrlblock.v(84)
-Info (10041): Inferred latch for "shiftSel[2]" at Contrlblock.v(84)
-Info (10041): Inferred latch for "aluSel[0]" at Contrlblock.v(84)
-Info (10041): Inferred latch for "aluSel[1]" at Contrlblock.v(84)
-Info (10041): Inferred latch for "aluSel[2]" at Contrlblock.v(84)
-Info (10041): Inferred latch for "aluSel[3]" at Contrlblock.v(84)
+Warning (10272): Verilog HDL Case Statement warning at Contrlblock.v(162): case item expression covers a value already covered by a previous case item
+Warning (10240): Verilog HDL Always Construct warning at Contrlblock.v(76): inferring latch(es) for variable "aluSel", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Contrlblock.v(76): inferring latch(es) for variable "shiftSel", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Contrlblock.v(76): inferring latch(es) for variable "regSel", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "regSel[0]" at Contrlblock.v(76)
+Info (10041): Inferred latch for "regSel[1]" at Contrlblock.v(76)
+Info (10041): Inferred latch for "regSel[2]" at Contrlblock.v(76)
+Info (10041): Inferred latch for "shiftSel[0]" at Contrlblock.v(76)
+Info (10041): Inferred latch for "shiftSel[1]" at Contrlblock.v(76)
+Info (10041): Inferred latch for "shiftSel[2]" at Contrlblock.v(76)
+Info (10041): Inferred latch for "aluSel[0]" at Contrlblock.v(76)
+Info (10041): Inferred latch for "aluSel[1]" at Contrlblock.v(76)
+Info (10041): Inferred latch for "aluSel[2]" at Contrlblock.v(76)
+Info (10041): Inferred latch for "aluSel[3]" at Contrlblock.v(76)
 Info (12128): Elaborating entity "REG_AR7" for hierarchy "REG_AR7:b2v_inst11"
-Info (12128): Elaborating entity "programReg" for hierarchy "programReg:b2v_inst14"
-Info (12128): Elaborating entity "addrReg" for hierarchy "addrReg:b2v_inst17"
 Info (12128): Elaborating entity "memory_ram" for hierarchy "memory_ram:b2v_inst18"
 Info (12128): Elaborating entity "altsyncram" for hierarchy "memory_ram:b2v_inst18|altsyncram:altsyncram_component"
 Info (12130): Elaborated megafunction instantiation "memory_ram:b2v_inst18|altsyncram:altsyncram_component"
@@ -678,61 +811,61 @@ Info (12128): Elaborating entity "clkstep" for hierarchy "clkstep:b2v_inst3"
 Info (12128): Elaborating entity "workReg" for hierarchy "workReg:b2v_inst6"
 Info (12128): Elaborating entity "ALU" for hierarchy "ALU:b2v_inst7"
 Info (12128): Elaborating entity "shiftReg" for hierarchy "shiftReg:b2v_inst8"
-Info (12128): Elaborating entity "buffer" for hierarchy "buffer:b2v_inst9"
+Info (12128): Elaborating entity "programReg" for hierarchy "programReg:b2v_programReg"
 Info (276014): Found 1 instances of uninferred RAM logic
     Info (276004): RAM logic "REG_AR7:b2v_inst11|ramdata" is uninferred due to inappropriate RAM size
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13027): Removed fan-outs from the following always-disabled I/O buffers
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "DataBus_ALTERA_SYNTHESIZED[0]" to the node "DataBus[0]"
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "DataBus_ALTERA_SYNTHESIZED[1]" to the node "DataBus[1]"
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "DataBus_ALTERA_SYNTHESIZED[2]" to the node "DataBus[2]"
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "DataBus_ALTERA_SYNTHESIZED[3]" to the node "DataBus[3]"
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "DataBus_ALTERA_SYNTHESIZED[4]" to the node "DataBus[4]"
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "DataBus_ALTERA_SYNTHESIZED[5]" to the node "DataBus[5]"
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "DataBus_ALTERA_SYNTHESIZED[6]" to the node "DataBus[6]"
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "DataBus_ALTERA_SYNTHESIZED[7]" to the node "DataBus[7]"
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "DataBus_ALTERA_SYNTHESIZED[8]" to the node "DataBus[8]"
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "DataBus_ALTERA_SYNTHESIZED[9]" to the node "DataBus[9]"
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "DataBus_ALTERA_SYNTHESIZED[10]" to the node "DataBus[10]"
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "DataBus_ALTERA_SYNTHESIZED[11]" to the node "DataBus[11]"
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "DataBus_ALTERA_SYNTHESIZED[12]" to the node "DataBus[12]"
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "DataBus_ALTERA_SYNTHESIZED[13]" to the node "DataBus[13]"
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "DataBus_ALTERA_SYNTHESIZED[14]" to the node "DataBus[14]"
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "DataBus_ALTERA_SYNTHESIZED[15]" to the node "DataBus[15]"
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
-    Warning (13047): Converted the fan-out from the tri-state buffer "buffer:b2v_inst9|q[0]" to the node "memory_ram:b2v_inst18|altsyncram:altsyncram_component|altsyncram_62j1:auto_generated|altsyncram_va92:altsyncram1|q_a[0]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "buffer:b2v_inst9|q[1]" to the node "memory_ram:b2v_inst18|altsyncram:altsyncram_component|altsyncram_62j1:auto_generated|altsyncram_va92:altsyncram1|q_a[1]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "buffer:b2v_inst9|q[2]" to the node "memory_ram:b2v_inst18|altsyncram:altsyncram_component|altsyncram_62j1:auto_generated|altsyncram_va92:altsyncram1|q_a[2]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "buffer:b2v_inst9|q[3]" to the node "memory_ram:b2v_inst18|altsyncram:altsyncram_component|altsyncram_62j1:auto_generated|altsyncram_va92:altsyncram1|q_a[3]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "buffer:b2v_inst9|q[4]" to the node "memory_ram:b2v_inst18|altsyncram:altsyncram_component|altsyncram_62j1:auto_generated|altsyncram_va92:altsyncram1|q_a[4]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "buffer:b2v_inst9|q[5]" to the node "memory_ram:b2v_inst18|altsyncram:altsyncram_component|altsyncram_62j1:auto_generated|altsyncram_va92:altsyncram1|q_a[5]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "buffer:b2v_inst9|q[6]" to the node "memory_ram:b2v_inst18|altsyncram:altsyncram_component|altsyncram_62j1:auto_generated|altsyncram_va92:altsyncram1|q_a[6]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "buffer:b2v_inst9|q[7]" to the node "memory_ram:b2v_inst18|altsyncram:altsyncram_component|altsyncram_62j1:auto_generated|altsyncram_va92:altsyncram1|q_a[7]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "buffer:b2v_inst9|q[8]" to the node "memory_ram:b2v_inst18|altsyncram:altsyncram_component|altsyncram_62j1:auto_generated|altsyncram_va92:altsyncram1|q_a[8]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "buffer:b2v_inst9|q[9]" to the node "memory_ram:b2v_inst18|altsyncram:altsyncram_component|altsyncram_62j1:auto_generated|altsyncram_va92:altsyncram1|q_a[9]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "buffer:b2v_inst9|q[10]" to the node "memory_ram:b2v_inst18|altsyncram:altsyncram_component|altsyncram_62j1:auto_generated|altsyncram_va92:altsyncram1|q_a[10]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "buffer:b2v_inst9|q[11]" to the node "memory_ram:b2v_inst18|altsyncram:altsyncram_component|altsyncram_62j1:auto_generated|altsyncram_va92:altsyncram1|q_a[11]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "buffer:b2v_inst9|q[12]" to the node "memory_ram:b2v_inst18|altsyncram:altsyncram_component|altsyncram_62j1:auto_generated|altsyncram_va92:altsyncram1|q_a[12]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "buffer:b2v_inst9|q[13]" to the node "memory_ram:b2v_inst18|altsyncram:altsyncram_component|altsyncram_62j1:auto_generated|altsyncram_va92:altsyncram1|q_a[13]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "buffer:b2v_inst9|q[14]" to the node "memory_ram:b2v_inst18|altsyncram:altsyncram_component|altsyncram_62j1:auto_generated|altsyncram_va92:altsyncram1|q_a[14]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "buffer:b2v_inst9|q[15]" to the node "memory_ram:b2v_inst18|altsyncram:altsyncram_component|altsyncram_62j1:auto_generated|altsyncram_va92:altsyncram1|q_a[15]" into an OR gate
-Warning (13012): Latch Contrlblock:b2v_inst|aluSel[1] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Contrlblock:b2v_inst|current_state.incPC1
-Warning (13012): Latch Contrlblock:b2v_inst|aluSel[2] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Contrlblock:b2v_inst|current_state.incPC1
-Warning (13012): Latch Contrlblock:b2v_inst|aluSel[3] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Contrlblock:b2v_inst|current_state.incPC1
-Warning (13012): Latch Contrlblock:b2v_inst|regSel[1] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Contrlblock:b2v_inst|current_state.adds3
-Warning (13012): Latch Contrlblock:b2v_inst|regSel[0] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Contrlblock:b2v_inst|current_state.adds3
-Warning (13012): Latch Contrlblock:b2v_inst|regSel[2] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Contrlblock:b2v_inst|current_state.adds3
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "test_currentstate[4]" is stuck at GND
+    Warning (13047): Converted the fan-out from the tri-state buffer "DataBus_ALTERA_SYNTHESIZED[0]" to the node "memory_ram:b2v_inst18|altsyncram:altsyncram_component|altsyncram_62j1:auto_generated|altsyncram_va92:altsyncram1|q_a[0]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DataBus_ALTERA_SYNTHESIZED[1]" to the node "memory_ram:b2v_inst18|altsyncram:altsyncram_component|altsyncram_62j1:auto_generated|altsyncram_va92:altsyncram1|q_a[1]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DataBus_ALTERA_SYNTHESIZED[2]" to the node "memory_ram:b2v_inst18|altsyncram:altsyncram_component|altsyncram_62j1:auto_generated|altsyncram_va92:altsyncram1|q_a[2]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DataBus_ALTERA_SYNTHESIZED[3]" to the node "memory_ram:b2v_inst18|altsyncram:altsyncram_component|altsyncram_62j1:auto_generated|altsyncram_va92:altsyncram1|q_a[3]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DataBus_ALTERA_SYNTHESIZED[4]" to the node "memory_ram:b2v_inst18|altsyncram:altsyncram_component|altsyncram_62j1:auto_generated|altsyncram_va92:altsyncram1|q_a[4]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DataBus_ALTERA_SYNTHESIZED[5]" to the node "memory_ram:b2v_inst18|altsyncram:altsyncram_component|altsyncram_62j1:auto_generated|altsyncram_va92:altsyncram1|q_a[5]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DataBus_ALTERA_SYNTHESIZED[6]" to the node "memory_ram:b2v_inst18|altsyncram:altsyncram_component|altsyncram_62j1:auto_generated|altsyncram_va92:altsyncram1|q_a[6]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DataBus_ALTERA_SYNTHESIZED[7]" to the node "memory_ram:b2v_inst18|altsyncram:altsyncram_component|altsyncram_62j1:auto_generated|altsyncram_va92:altsyncram1|q_a[7]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DataBus_ALTERA_SYNTHESIZED[8]" to the node "memory_ram:b2v_inst18|altsyncram:altsyncram_component|altsyncram_62j1:auto_generated|altsyncram_va92:altsyncram1|q_a[8]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DataBus_ALTERA_SYNTHESIZED[9]" to the node "memory_ram:b2v_inst18|altsyncram:altsyncram_component|altsyncram_62j1:auto_generated|altsyncram_va92:altsyncram1|q_a[9]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DataBus_ALTERA_SYNTHESIZED[10]" to the node "memory_ram:b2v_inst18|altsyncram:altsyncram_component|altsyncram_62j1:auto_generated|altsyncram_va92:altsyncram1|q_a[10]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DataBus_ALTERA_SYNTHESIZED[11]" to the node "memory_ram:b2v_inst18|altsyncram:altsyncram_component|altsyncram_62j1:auto_generated|altsyncram_va92:altsyncram1|q_a[11]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DataBus_ALTERA_SYNTHESIZED[12]" to the node "memory_ram:b2v_inst18|altsyncram:altsyncram_component|altsyncram_62j1:auto_generated|altsyncram_va92:altsyncram1|q_a[12]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DataBus_ALTERA_SYNTHESIZED[13]" to the node "memory_ram:b2v_inst18|altsyncram:altsyncram_component|altsyncram_62j1:auto_generated|altsyncram_va92:altsyncram1|q_a[13]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DataBus_ALTERA_SYNTHESIZED[14]" to the node "memory_ram:b2v_inst18|altsyncram:altsyncram_component|altsyncram_62j1:auto_generated|altsyncram_va92:altsyncram1|q_a[14]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DataBus_ALTERA_SYNTHESIZED[15]" to the node "memory_ram:b2v_inst18|altsyncram:altsyncram_component|altsyncram_62j1:auto_generated|altsyncram_va92:altsyncram1|q_a[15]" into an OR gate
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "Contrlblock:b2v_inst|aluSel[2]" merged with LATCH primitive "Contrlblock:b2v_inst|aluSel[1]"
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
-Info (17049): 5 registers lost all their fanouts during netlist optimizations.
-Info (13000): Registers with preset signals will power-up high
-Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "sld_hub:auto_hub|receive[0][0]" is stuck at GND
-Info (286031): Timing-Driven Synthesis is running on partition "sld_hub:auto_hub"
+Info (17049): 144 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file D:/QuatusIIProject/CPU16bit/output_files/CPU16bit.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 768 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 426 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
-    Info (21059): Implemented 72 output pins
-    Info (21061): Implemented 673 logic cells
+    Info (21059): Implemented 33 output pins
+    Info (21061): Implemented 370 logic cells
     Info (21064): Implemented 16 RAM segments
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 39 warnings
-    Info: Peak virtual memory: 4715 megabytes
-    Info: Processing ended: Tue Mar 19 10:11:21 2024
+    Info: Peak virtual memory: 4710 megabytes
+    Info: Processing ended: Wed Mar 20 19:41:10 2024
     Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
 
 
 +------------------------------------------+

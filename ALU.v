@@ -3,9 +3,6 @@ module ALU(
     input wire [15:0] workregout,
     input wire [3:0] sel,
     output reg [15:0] aluout
-//测试
-//	 output wire [15:0] test_aluout
-//
 );
 parameter alupass=0 ;
 parameter andOp=1;
@@ -17,10 +14,6 @@ parameter sub=6;
 parameter inc=7;
 parameter dec=8;
 parameter zero=9;
-
-//测试
-//assign test_aluout=aluout;
-//
 
 always @(databus or workregout or sel) 
 case (sel)

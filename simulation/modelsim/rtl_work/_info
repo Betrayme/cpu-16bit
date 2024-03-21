@@ -1,0 +1,289 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/QuatusIIProject/CPU16bit/simulation/modelsim
+T_opt
+!s110 1710934919
+V<TNgST[`cF=Im2iUf0^kz0
+04 8 4 work shiftReg fast 0
+=1-38f3ab9abf4e-65facb86-3c5-4068
+o-quiet -auto_acc_if_foreign -work work
+n@_opt
+OL;O;10.4;61
+R0
+vaddrReg
+Z1 !s110 1710934974
+!i10b 1
+!s100 GEeVhIaCD:hKLob:B?D]>0
+ILDRCaK:RXO1?fG6ma3>i@3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1710674165
+8D:/QuatusIIProject/CPU16bit/addrReg.v
+FD:/QuatusIIProject/CPU16bit/addrReg.v
+L0 1
+Z3 OL;L;10.4;61
+r1
+!s85 0
+31
+Z4 !s108 1710934974.479000
+Z5 !s107 D:/QuatusIIProject/CPU16bit/workReg.v|D:/QuatusIIProject/CPU16bit/Toplevel.v|D:/QuatusIIProject/CPU16bit/shiftReg.v|D:/QuatusIIProject/CPU16bit/REG_AR7.v|D:/QuatusIIProject/CPU16bit/programReg.v|D:/QuatusIIProject/CPU16bit/memory_ram_bb.v|D:/QuatusIIProject/CPU16bit/memory_ram.v|D:/QuatusIIProject/CPU16bit/instrReg.v|D:/QuatusIIProject/CPU16bit/CPU16bit.v|D:/QuatusIIProject/CPU16bit/Contrlblock.v|D:/QuatusIIProject/CPU16bit/clkstep.v|D:/QuatusIIProject/CPU16bit/buffer.v|D:/QuatusIIProject/CPU16bit/ALU.v|D:/QuatusIIProject/CPU16bit/addrReg.v|
+Z6 !s90 -reportprogress|300|-work|work|D:/QuatusIIProject/CPU16bit/addrReg.v|D:/QuatusIIProject/CPU16bit/ALU.v|D:/QuatusIIProject/CPU16bit/buffer.v|D:/QuatusIIProject/CPU16bit/clkstep.v|D:/QuatusIIProject/CPU16bit/Contrlblock.v|D:/QuatusIIProject/CPU16bit/CPU16bit.v|D:/QuatusIIProject/CPU16bit/instrReg.v|D:/QuatusIIProject/CPU16bit/memory_ram.v|D:/QuatusIIProject/CPU16bit/memory_ram_bb.v|D:/QuatusIIProject/CPU16bit/programReg.v|D:/QuatusIIProject/CPU16bit/REG_AR7.v|D:/QuatusIIProject/CPU16bit/shiftReg.v|D:/QuatusIIProject/CPU16bit/Toplevel.v|D:/QuatusIIProject/CPU16bit/workReg.v|
+!i113 0
+Z7 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+naddr@reg
+vALU
+R1
+!i10b 1
+!s100 emWQHO@5AOhe=UU8W0E143
+IUCdLZ`^aZAf6C9l;<<5I@2
+R2
+R0
+w1710925058
+8D:/QuatusIIProject/CPU16bit/ALU.v
+FD:/QuatusIIProject/CPU16bit/ALU.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 0
+R7
+n@a@l@u
+vbuffer
+R1
+!i10b 1
+!s100 l_eM4FbdfbamW1_XbY<MF0
+I[__<>@j;WgN<>ikk_[:RA2
+R2
+R0
+w1710930432
+8D:/QuatusIIProject/CPU16bit/buffer.v
+FD:/QuatusIIProject/CPU16bit/buffer.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 0
+R7
+vclkstep
+R1
+!i10b 1
+!s100 9[ENSNc>X;^AGALU;_ceY1
+IG5QU8[C4JJFU1kRz4n<5l1
+R2
+R0
+w1710933582
+8D:/QuatusIIProject/CPU16bit/clkstep.v
+FD:/QuatusIIProject/CPU16bit/clkstep.v
+L0 19
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 0
+R7
+vContrlblock
+R1
+!i10b 1
+!s100 IWh?<H6oFNK[UfJccENKE3
+I8aD7eI@1eX1jcCQ<b]5`o2
+R2
+R0
+w1710925084
+8D:/QuatusIIProject/CPU16bit/Contrlblock.v
+FD:/QuatusIIProject/CPU16bit/Contrlblock.v
+L0 20
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 0
+R7
+n@contrlblock
+vCPU16bit
+R1
+!i10b 1
+!s100 ]8fD9B^<keH4@KPKP9Pb=1
+IAh7nJ]cB:O]e<j[R=E8;:3
+R2
+R0
+w1710927918
+8D:/QuatusIIProject/CPU16bit/Toplevel.v
+FD:/QuatusIIProject/CPU16bit/Toplevel.v
+L0 21
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 0
+R7
+n@c@p@u16bit
+vCPU16bit_test
+!s110 1710934958
+!i10b 1
+!s100 BET=F`oSoCD163U3;Tl`M2
+IQWOfElX05]cz[C3E0^0eD0
+R2
+R0
+w1710934778
+8D:/QuatusIIProject/CPU16bit/simulation/modelsim/CPU16bit_test.vt
+FD:/QuatusIIProject/CPU16bit/simulation/modelsim/CPU16bit_test.vt
+L0 3
+R3
+r1
+!s85 0
+31
+!s108 1710934958.273000
+!s107 D:/QuatusIIProject/CPU16bit/simulation/modelsim/CPU16bit_test.vt|
+!s90 -reportprogress|300|-work|work|D:/QuatusIIProject/CPU16bit/simulation/modelsim/CPU16bit_test.vt|
+!i113 0
+R7
+n@c@p@u16bit_test
+vinstrReg
+R1
+!i10b 1
+!s100 DX6W^`C?[Ecj5m8R^Y;1P0
+IC][Qn6V2YVV0MS8;Se[Vf0
+R2
+R0
+w1710808830
+8D:/QuatusIIProject/CPU16bit/instrReg.v
+FD:/QuatusIIProject/CPU16bit/instrReg.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 0
+R7
+ninstr@reg
+vmemory_ram
+R1
+!i10b 1
+!s100 ]3^H_:XB0j4<i`f>hgXL[3
+IW4TQk8FjzYa1;8ToWLO6T1
+R2
+R0
+w1710590356
+8D:/QuatusIIProject/CPU16bit/memory_ram_bb.v
+FD:/QuatusIIProject/CPU16bit/memory_ram_bb.v
+L0 34
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 0
+R7
+vprogramReg
+R1
+!i10b 1
+!s100 _FgU4]1^AolW>32QbG]880
+I[`QRKIL?]eUVcLZWF[2Zg2
+R2
+R0
+w1710925036
+8D:/QuatusIIProject/CPU16bit/programReg.v
+FD:/QuatusIIProject/CPU16bit/programReg.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 0
+R7
+nprogram@reg
+vREG_AR7
+R1
+!i10b 1
+!s100 UkKHjh7YVF[3knnnh?aM;1
+IAmHZgJ?bVN`?@33AAS^2U1
+R2
+R0
+w1710931106
+8D:/QuatusIIProject/CPU16bit/REG_AR7.v
+FD:/QuatusIIProject/CPU16bit/REG_AR7.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 0
+R7
+n@r@e@g_@a@r7
+vshiftReg
+R1
+!i10b 1
+!s100 P[6YD0Gj5b=lhEz9@C59_2
+I@]0N@QCLj?0O8PliZ2Ao_0
+R2
+R0
+w1710925047
+8D:/QuatusIIProject/CPU16bit/shiftReg.v
+FD:/QuatusIIProject/CPU16bit/shiftReg.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 0
+R7
+nshift@reg
+vworkReg
+R1
+!i10b 1
+!s100 PIF>>L^j_]O>aR06Uak3b1
+I^n]^M<lzOEMK=bjFf^8]L0
+R2
+R0
+w1710669844
+8D:/QuatusIIProject/CPU16bit/workReg.v
+FD:/QuatusIIProject/CPU16bit/workReg.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 0
+R7
+nwork@reg

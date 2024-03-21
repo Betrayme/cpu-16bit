@@ -14,7 +14,7 @@
 
 // PROGRAM		"Quartus II 64-Bit"
 // VERSION		"Version 13.1.0 Build 162 10/23/2013 SJ Full Version"
-// CREATED		"Fri Mar 15 20:34:35 2024"
+// CREATED		"Wed Mar 20 19:19:42 2024"
 
 module clkstep(
 	CLK,

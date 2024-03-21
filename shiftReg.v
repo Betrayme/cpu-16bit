@@ -2,13 +2,7 @@ module shiftReg(
     input wire [2:0] sel,
     input wire [15:0] a,
     output reg [15:0] y
-//测试
-	//output wire [15:0] test_shiftReg
-//
 );
-//测试
-	//assign test_shiftReg=y;
-//
 
 parameter sftpass=0,sftl=1,sftr=2,rotl=3,rotr=4;
 always @(a or sel) 

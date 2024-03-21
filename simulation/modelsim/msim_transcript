@@ -1,0 +1,307 @@
+# Reading D:/Modelsim/tcl/vsim/pref.tcl
+# //  ModelSim SE-64 10.4 Dec  3 2014 
+# //
+# //  Copyright 1991-2014 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# do CPU16bit_run_msim_rtl_verilog.do
+# vmap altera_ver D:/QuatusIIProject/CPU16bit/simulation/qsim/verilog_libs/altera_ver
+# Model Technology ModelSim SE-64 vmap 10.4 Lib Mapping Utility 2014.12 Dec  3 2014
+# vmap -modelsim_quiet altera_ver D:/QuatusIIProject/CPU16bit/simulation/qsim/verilog_libs/altera_ver 
+# Copying D:/Modelsim/win64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied D:/Modelsim/win64/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# vmap lpm_ver D:/QuatusIIProject/CPU16bit/simulation/qsim/verilog_libs/lpm_ver
+# Model Technology ModelSim SE-64 vmap 10.4 Lib Mapping Utility 2014.12 Dec  3 2014
+# vmap -modelsim_quiet lpm_ver D:/QuatusIIProject/CPU16bit/simulation/qsim/verilog_libs/lpm_ver 
+# Modifying modelsim.ini
+# vmap sgate_ver D:/QuatusIIProject/CPU16bit/simulation/qsim/verilog_libs/sgate_ver
+# Model Technology ModelSim SE-64 vmap 10.4 Lib Mapping Utility 2014.12 Dec  3 2014
+# vmap -modelsim_quiet sgate_ver D:/QuatusIIProject/CPU16bit/simulation/qsim/verilog_libs/sgate_ver 
+# Modifying modelsim.ini
+# vmap altera_mf_ver D:/QuatusIIProject/CPU16bit/simulation/qsim/verilog_libs/altera_mf_ver
+# Model Technology ModelSim SE-64 vmap 10.4 Lib Mapping Utility 2014.12 Dec  3 2014
+# vmap -modelsim_quiet altera_mf_ver D:/QuatusIIProject/CPU16bit/simulation/qsim/verilog_libs/altera_mf_ver 
+# Modifying modelsim.ini
+# vmap altera_lnsim_ver D:/QuatusIIProject/CPU16bit/simulation/qsim/verilog_libs/altera_lnsim_ver
+# Model Technology ModelSim SE-64 vmap 10.4 Lib Mapping Utility 2014.12 Dec  3 2014
+# vmap -modelsim_quiet altera_lnsim_ver D:/QuatusIIProject/CPU16bit/simulation/qsim/verilog_libs/altera_lnsim_ver 
+# Modifying modelsim.ini
+# vmap cycloneive_ver D:/QuatusIIProject/CPU16bit/simulation/qsim/verilog_libs/cycloneive_ver
+# Model Technology ModelSim SE-64 vmap 10.4 Lib Mapping Utility 2014.12 Dec  3 2014
+# vmap -modelsim_quiet cycloneive_ver D:/QuatusIIProject/CPU16bit/simulation/qsim/verilog_libs/cycloneive_ver 
+# Modifying modelsim.ini
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim SE-64 vmap 10.4 Lib Mapping Utility 2014.12 Dec  3 2014
+# vmap -modelsim_quiet work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+D:/QuatusIIProject/CPU16bit {D:/QuatusIIProject/CPU16bit/instrReg.v}
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 19:41:44 on Mar 20,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/QuatusIIProject/CPU16bit" D:/QuatusIIProject/CPU16bit/instrReg.v 
+# -- Compiling module instrReg
+# 
+# Top level modules:
+# 	instrReg
+# End time: 19:41:44 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/QuatusIIProject/CPU16bit {D:/QuatusIIProject/CPU16bit/workReg.v}
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 19:41:44 on Mar 20,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/QuatusIIProject/CPU16bit" D:/QuatusIIProject/CPU16bit/workReg.v 
+# -- Compiling module workReg
+# 
+# Top level modules:
+# 	workReg
+# End time: 19:41:44 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/QuatusIIProject/CPU16bit {D:/QuatusIIProject/CPU16bit/ALU.v}
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 19:41:44 on Mar 20,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/QuatusIIProject/CPU16bit" D:/QuatusIIProject/CPU16bit/ALU.v 
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 19:41:45 on Mar 20,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/QuatusIIProject/CPU16bit {D:/QuatusIIProject/CPU16bit/shiftReg.v}
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 19:41:45 on Mar 20,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/QuatusIIProject/CPU16bit" D:/QuatusIIProject/CPU16bit/shiftReg.v 
+# -- Compiling module shiftReg
+# 
+# Top level modules:
+# 	shiftReg
+# End time: 19:41:45 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/QuatusIIProject/CPU16bit {D:/QuatusIIProject/CPU16bit/REG_AR7.v}
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 19:41:45 on Mar 20,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/QuatusIIProject/CPU16bit" D:/QuatusIIProject/CPU16bit/REG_AR7.v 
+# -- Compiling module REG_AR7
+# 
+# Top level modules:
+# 	REG_AR7
+# End time: 19:41:45 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/QuatusIIProject/CPU16bit {D:/QuatusIIProject/CPU16bit/programReg.v}
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 19:41:45 on Mar 20,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/QuatusIIProject/CPU16bit" D:/QuatusIIProject/CPU16bit/programReg.v 
+# -- Compiling module programReg
+# 
+# Top level modules:
+# 	programReg
+# End time: 19:41:45 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/QuatusIIProject/CPU16bit {D:/QuatusIIProject/CPU16bit/addrReg.v}
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 19:41:45 on Mar 20,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/QuatusIIProject/CPU16bit" D:/QuatusIIProject/CPU16bit/addrReg.v 
+# -- Compiling module addrReg
+# 
+# Top level modules:
+# 	addrReg
+# End time: 19:41:45 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/QuatusIIProject/CPU16bit {D:/QuatusIIProject/CPU16bit/memory_ram.v}
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 19:41:45 on Mar 20,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/QuatusIIProject/CPU16bit" D:/QuatusIIProject/CPU16bit/memory_ram.v 
+# -- Compiling module memory_ram
+# 
+# Top level modules:
+# 	memory_ram
+# End time: 19:41:45 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/QuatusIIProject/CPU16bit {D:/QuatusIIProject/CPU16bit/buffer.v}
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 19:41:45 on Mar 20,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/QuatusIIProject/CPU16bit" D:/QuatusIIProject/CPU16bit/buffer.v 
+# -- Compiling module buffer
+# 
+# Top level modules:
+# 	buffer
+# End time: 19:41:45 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/QuatusIIProject/CPU16bit {D:/QuatusIIProject/CPU16bit/Contrlblock.v}
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 19:41:45 on Mar 20,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/QuatusIIProject/CPU16bit" D:/QuatusIIProject/CPU16bit/Contrlblock.v 
+# -- Compiling module Contrlblock
+# 
+# Top level modules:
+# 	Contrlblock
+# End time: 19:41:45 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/QuatusIIProject/CPU16bit {D:/QuatusIIProject/CPU16bit/CPU16bit.v}
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 19:41:45 on Mar 20,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/QuatusIIProject/CPU16bit" D:/QuatusIIProject/CPU16bit/CPU16bit.v 
+# -- Compiling module CPU16bit
+# ** Error: D:/QuatusIIProject/CPU16bit/CPU16bit.v(35): (vlog-2730) Undefined variable: 'SYNTHESIZED_WIRE_12'.
+# 
+# ** Error (suppressible): D:/QuatusIIProject/CPU16bit/CPU16bit.v(53): (vlog-2388) 'SYNTHESIZED_WIRE_12' already declared in this scope (CPU16bit).
+# 
+# End time: 19:41:45 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# ** Error: D:/Modelsim/win64/vlog failed.
+# Error in macro ./CPU16bit_run_msim_rtl_verilog.do line 24
+# D:/Modelsim/win64/vlog failed.
+#     while executing
+# "vlog -vlog01compat -work work +incdir+D:/QuatusIIProject/CPU16bit {D:/QuatusIIProject/CPU16bit/CPU16bit.v}"
+vsim work.shiftReg
+# vsim -gui "+altera" -l msim_transcript -do "CPU16bit_run_msim_rtl_verilog.do" 
+# Start time: 19:41:58 on Mar 20,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# 
+# Loading work.shiftReg(fast)
+vlog -reportprogress 300 -work work D:/QuatusIIProject/CPU16bit/simulation/modelsim/CPU16bit_test.vt
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 19:42:32 on Mar 20,2024
+# vlog -reportprogress 300 -work work D:/QuatusIIProject/CPU16bit/simulation/modelsim/CPU16bit_test.vt 
+# -- Compiling module CPU16bit_test
+# 
+# Top level modules:
+# 	CPU16bit_test
+# End time: 19:42:32 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work D:/QuatusIIProject/CPU16bit/simulation/modelsim/CPU16bit_test.vt
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 19:42:33 on Mar 20,2024
+# vlog -reportprogress 300 -work work D:/QuatusIIProject/CPU16bit/simulation/modelsim/CPU16bit_test.vt 
+# -- Compiling module CPU16bit_test
+# 
+# Top level modules:
+# 	CPU16bit_test
+# End time: 19:42:33 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work D:/QuatusIIProject/CPU16bit/simulation/modelsim/CPU16bit_test.vt
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 19:42:33 on Mar 20,2024
+# vlog -reportprogress 300 -work work D:/QuatusIIProject/CPU16bit/simulation/modelsim/CPU16bit_test.vt 
+# -- Compiling module CPU16bit_test
+# 
+# Top level modules:
+# 	CPU16bit_test
+# End time: 19:42:33 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work D:/QuatusIIProject/CPU16bit/simulation/modelsim/CPU16bit_test.vt
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 19:42:33 on Mar 20,2024
+# vlog -reportprogress 300 -work work D:/QuatusIIProject/CPU16bit/simulation/modelsim/CPU16bit_test.vt 
+# -- Compiling module CPU16bit_test
+# 
+# Top level modules:
+# 	CPU16bit_test
+# End time: 19:42:33 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work D:/QuatusIIProject/CPU16bit/simulation/modelsim/CPU16bit_test.vt
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 19:42:34 on Mar 20,2024
+# vlog -reportprogress 300 -work work D:/QuatusIIProject/CPU16bit/simulation/modelsim/CPU16bit_test.vt 
+# -- Compiling module CPU16bit_test
+# 
+# Top level modules:
+# 	CPU16bit_test
+# End time: 19:42:34 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work D:/QuatusIIProject/CPU16bit/simulation/modelsim/CPU16bit_test.vt
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 19:42:34 on Mar 20,2024
+# vlog -reportprogress 300 -work work D:/QuatusIIProject/CPU16bit/simulation/modelsim/CPU16bit_test.vt 
+# -- Compiling module CPU16bit_test
+# 
+# Top level modules:
+# 	CPU16bit_test
+# End time: 19:42:34 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work D:/QuatusIIProject/CPU16bit/simulation/modelsim/CPU16bit_test.vt
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 19:42:34 on Mar 20,2024
+# vlog -reportprogress 300 -work work D:/QuatusIIProject/CPU16bit/simulation/modelsim/CPU16bit_test.vt 
+# -- Compiling module CPU16bit_test
+# 
+# Top level modules:
+# 	CPU16bit_test
+# End time: 19:42:34 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work D:/QuatusIIProject/CPU16bit/simulation/modelsim/CPU16bit_test.vt
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 19:42:34 on Mar 20,2024
+# vlog -reportprogress 300 -work work D:/QuatusIIProject/CPU16bit/simulation/modelsim/CPU16bit_test.vt 
+# -- Compiling module CPU16bit_test
+# 
+# Top level modules:
+# 	CPU16bit_test
+# End time: 19:42:34 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work D:/QuatusIIProject/CPU16bit/simulation/modelsim/CPU16bit_test.vt
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 19:42:38 on Mar 20,2024
+# vlog -reportprogress 300 -work work D:/QuatusIIProject/CPU16bit/simulation/modelsim/CPU16bit_test.vt 
+# -- Compiling module CPU16bit_test
+# 
+# Top level modules:
+# 	CPU16bit_test
+# End time: 19:42:38 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work D:/QuatusIIProject/CPU16bit/addrReg.v D:/QuatusIIProject/CPU16bit/ALU.v D:/QuatusIIProject/CPU16bit/buffer.v D:/QuatusIIProject/CPU16bit/clkstep.v D:/QuatusIIProject/CPU16bit/Contrlblock.v D:/QuatusIIProject/CPU16bit/CPU16bit.v D:/QuatusIIProject/CPU16bit/instrReg.v D:/QuatusIIProject/CPU16bit/memory_ram.v D:/QuatusIIProject/CPU16bit/memory_ram_bb.v D:/QuatusIIProject/CPU16bit/programReg.v D:/QuatusIIProject/CPU16bit/REG_AR7.v D:/QuatusIIProject/CPU16bit/shiftReg.v D:/QuatusIIProject/CPU16bit/Toplevel.v D:/QuatusIIProject/CPU16bit/workReg.v
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 19:42:54 on Mar 20,2024
+# vlog -reportprogress 300 -work work D:/QuatusIIProject/CPU16bit/addrReg.v D:/QuatusIIProject/CPU16bit/ALU.v D:/QuatusIIProject/CPU16bit/buffer.v D:/QuatusIIProject/CPU16bit/clkstep.v D:/QuatusIIProject/CPU16bit/Contrlblock.v D:/QuatusIIProject/CPU16bit/CPU16bit.v D:/QuatusIIProject/CPU16bit/instrReg.v D:/QuatusIIProject/CPU16bit/memory_ram.v D:/QuatusIIProject/CPU16bit/memory_ram_bb.v D:/QuatusIIProject/CPU16bit/programReg.v D:/QuatusIIProject/CPU16bit/REG_AR7.v D:/QuatusIIProject/CPU16bit/shiftReg.v D:/QuatusIIProject/CPU16bit/Toplevel.v D:/QuatusIIProject/CPU16bit/workReg.v 
+# -- Compiling module addrReg
+# -- Compiling module ALU
+# -- Compiling module buffer
+# -- Compiling module clkstep
+# -- Compiling module Contrlblock
+# -- Compiling module CPU16bit
+# ** Error: D:/QuatusIIProject/CPU16bit/CPU16bit.v(35): (vlog-2730) Undefined variable: 'SYNTHESIZED_WIRE_12'.
+# 
+# ** Error (suppressible): D:/QuatusIIProject/CPU16bit/CPU16bit.v(53): (vlog-2388) 'SYNTHESIZED_WIRE_12' already declared in this scope (CPU16bit).
+# 
+# -- Compiling module instrReg
+# -- Compiling module memory_ram
+# ** Warning: D:/QuatusIIProject/CPU16bit/memory_ram_bb.v(34): (vlog-2275) 'memory_ram' already exists and will be overwritten.
+# 
+# -- Compiling module memory_ram
+# -- Compiling module programReg
+# -- Compiling module REG_AR7
+# -- Compiling module shiftReg
+# ** Warning: D:/QuatusIIProject/CPU16bit/Toplevel.v(21): (vlog-2275) 'CPU16bit' already exists and will be overwritten.
+# 
+# -- Compiling module CPU16bit
+# -- Compiling module workReg
+# End time: 19:42:54 on Mar 20,2024, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 2
+vsim work.CPU16bit_test
+# vsim 
+# Start time: 19:43:17 on Mar 20,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# 
+# ** Error: D:/QuatusIIProject/CPU16bit/Toplevel.v(256): (vopt-2135) Too many port connections. Expected 4, found 5.
+# 
+# ** Error: D:/QuatusIIProject/CPU16bit/Toplevel.v(256): (vopt-2912) Port 'en' not found in module 'buffer' (2nd connection).
+# 
+# ** Error: D:/QuatusIIProject/CPU16bit/simulation/modelsim/CPU16bit_test.vt(30): (vopt-2912) Port 'test_PC' not found in module 'CPU16bit' (4th connection).
+# 
+# ** Warning: D:/QuatusIIProject/CPU16bit/simulation/modelsim/CPU16bit_test.vt(39): (vopt-2241) Connection width does not match width of port 'addrout'. The port definition is at: D:/QuatusIIProject/CPU16bit/addrReg.v(7).
+# 
+# Optimization failed
+# Error loading design
