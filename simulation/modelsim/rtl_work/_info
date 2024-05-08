@@ -1,0 +1,384 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/WORK_SPCAE/QuatusII_Project/CPU16bit/simulation/modelsim
+T_opt
+Z1 !s110 1715171783
+VhTezm2<>1om?i8WB3K]bZ3
+04 7 4 work testtop fast 0
+=1-38f3ab9abf4e-663b71c7-189-26e8
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.4;61
+vaddrReg
+Z2 !s110 1715171782
+!i10b 1
+!s100 GEeVhIaCD:hKLob:B?D]>0
+IYT?T;A1mm]6P1`G2kAaEA2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1710674165
+8D:/WORK_SPCAE/QuatusII_Project/CPU16bit/addrReg.v
+FD:/WORK_SPCAE/QuatusII_Project/CPU16bit/addrReg.v
+L0 1
+Z4 OL;L;10.4;61
+r1
+!s85 0
+31
+!s108 1715171782.843000
+!s107 D:/WORK_SPCAE/QuatusII_Project/CPU16bit/addrReg.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/WORK_SPCAE/QuatusII_Project/CPU16bit|D:/WORK_SPCAE/QuatusII_Project/CPU16bit/addrReg.v|
+!i113 0
+Z5 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z6 !s92 -vlog01compat -work work +incdir+D:/WORK_SPCAE/QuatusII_Project/CPU16bit -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+naddr@reg
+vALU
+R2
+!i10b 1
+!s100 emWQHO@5AOhe=UU8W0E143
+I[E``fAkZ1geB@>ClR<:KT0
+R3
+R0
+w1710925058
+8D:/WORK_SPCAE/QuatusII_Project/CPU16bit/ALU.v
+FD:/WORK_SPCAE/QuatusII_Project/CPU16bit/ALU.v
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1715171782.638000
+!s107 D:/WORK_SPCAE/QuatusII_Project/CPU16bit/ALU.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/WORK_SPCAE/QuatusII_Project/CPU16bit|D:/WORK_SPCAE/QuatusII_Project/CPU16bit/ALU.v|
+!i113 0
+R5
+R6
+n@a@l@u
+vbuffer
+R2
+!i10b 1
+!s100 l_eM4FbdfbamW1_XbY<MF0
+I;0f4]<3`>aIKbSNVU_SJ@2
+R3
+R0
+w1710930432
+8D:/WORK_SPCAE/QuatusII_Project/CPU16bit/buffer.v
+FD:/WORK_SPCAE/QuatusII_Project/CPU16bit/buffer.v
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1715171782.936000
+!s107 D:/WORK_SPCAE/QuatusII_Project/CPU16bit/buffer.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/WORK_SPCAE/QuatusII_Project/CPU16bit|D:/WORK_SPCAE/QuatusII_Project/CPU16bit/buffer.v|
+!i113 0
+R5
+R6
+vclkdiv
+R1
+!i10b 1
+!s100 eO3cK^:NQ8[gzndAZe<9L0
+IaKXzPfNF[?DG]YOYQ=aC73
+R3
+R0
+w1715169561
+8D:/WORK_SPCAE/QuatusII_Project/CPU16bit/clkdiv.v
+FD:/WORK_SPCAE/QuatusII_Project/CPU16bit/clkdiv.v
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1715171783.096000
+!s107 D:/WORK_SPCAE/QuatusII_Project/CPU16bit/clkdiv.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/WORK_SPCAE/QuatusII_Project/CPU16bit|D:/WORK_SPCAE/QuatusII_Project/CPU16bit/clkdiv.v|
+!i113 0
+R5
+R6
+vclkstep
+R1
+!i10b 1
+!s100 9[ENSNc>X;^AGALU;_ceY1
+IE4T;jlWkPI[h`N3iIh?>]0
+R3
+R0
+w1710933582
+8D:/WORK_SPCAE/QuatusII_Project/CPU16bit/clkstep.v
+FD:/WORK_SPCAE/QuatusII_Project/CPU16bit/clkstep.v
+Z7 L0 19
+R4
+r1
+!s85 0
+31
+!s108 1715171783.036000
+!s107 D:/WORK_SPCAE/QuatusII_Project/CPU16bit/clkstep.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/WORK_SPCAE/QuatusII_Project/CPU16bit|D:/WORK_SPCAE/QuatusII_Project/CPU16bit/clkstep.v|
+!i113 0
+R5
+R6
+vconnection
+R1
+!i10b 1
+!s100 8@WIjm=KAVgZIKDQ10M:T2
+I[MMWi>HB_BFQhhjz;;N=a0
+R3
+R0
+w1715137733
+8D:/WORK_SPCAE/QuatusII_Project/CPU16bit/connection.v
+FD:/WORK_SPCAE/QuatusII_Project/CPU16bit/connection.v
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1715171783.147000
+!s107 D:/WORK_SPCAE/QuatusII_Project/CPU16bit/connection.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/WORK_SPCAE/QuatusII_Project/CPU16bit|D:/WORK_SPCAE/QuatusII_Project/CPU16bit/connection.v|
+!i113 0
+R5
+R6
+vContrlblock
+R2
+!i10b 1
+!s100 Nn19SY=GMLTc]LGSD4Xe_3
+IGbO:kagY9]:ck:kkOf6?a3
+R3
+R0
+w1715165791
+8D:/WORK_SPCAE/QuatusII_Project/CPU16bit/Contrlblock.v
+FD:/WORK_SPCAE/QuatusII_Project/CPU16bit/Contrlblock.v
+L0 21
+R4
+r1
+!s85 0
+31
+!s108 1715171782.986000
+!s107 D:/WORK_SPCAE/QuatusII_Project/CPU16bit/Contrlblock.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/WORK_SPCAE/QuatusII_Project/CPU16bit|D:/WORK_SPCAE/QuatusII_Project/CPU16bit/Contrlblock.v|
+!i113 0
+R5
+R6
+n@contrlblock
+vCPU16bit
+R2
+!i10b 1
+!s100 >h;A1A^JC]2HbYl9WRMh;0
+I0K=K[7f:Zz_@DTR7GH_Ag0
+R3
+R0
+w1715171671
+8D:/WORK_SPCAE/QuatusII_Project/CPU16bit/CPU16bit.v
+FD:/WORK_SPCAE/QuatusII_Project/CPU16bit/CPU16bit.v
+R7
+R4
+r1
+!s85 0
+31
+!s108 1715171782.375000
+!s107 D:/WORK_SPCAE/QuatusII_Project/CPU16bit/CPU16bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/WORK_SPCAE/QuatusII_Project/CPU16bit|D:/WORK_SPCAE/QuatusII_Project/CPU16bit/CPU16bit.v|
+!i113 0
+R5
+R6
+n@c@p@u16bit
+vinstrReg
+R2
+!i10b 1
+!s100 DX6W^`C?[Ecj5m8R^Y;1P0
+IC7om[PnPTKJCFYCKILDU30
+R3
+R0
+w1710808830
+8D:/WORK_SPCAE/QuatusII_Project/CPU16bit/instrReg.v
+FD:/WORK_SPCAE/QuatusII_Project/CPU16bit/instrReg.v
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1715171782.535000
+!s107 D:/WORK_SPCAE/QuatusII_Project/CPU16bit/instrReg.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/WORK_SPCAE/QuatusII_Project/CPU16bit|D:/WORK_SPCAE/QuatusII_Project/CPU16bit/instrReg.v|
+!i113 0
+R5
+R6
+ninstr@reg
+vled_module
+R2
+!i10b 1
+!s100 aBA7@^4YV`jS;QSha;Jig3
+I5ih`ZIB_LAjk^ilGd8b:[2
+R3
+R0
+w1381149896
+8D:/WORK_SPCAE/QuatusII_Project/CPU16bit/led.v
+FD:/WORK_SPCAE/QuatusII_Project/CPU16bit/led.v
+Z8 L0 10
+R4
+r1
+!s85 0
+31
+!s108 1715171782.476000
+!s107 D:/WORK_SPCAE/QuatusII_Project/CPU16bit/led.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/WORK_SPCAE/QuatusII_Project/CPU16bit|D:/WORK_SPCAE/QuatusII_Project/CPU16bit/led.v|
+!i113 0
+R5
+R6
+vmemory_ram
+R2
+!i10b 1
+!s100 ^kPV?n>EXChO=bQ33YV5<2
+I<IXcg;LhJGECi[YGHK<2d1
+R3
+R0
+w1710590356
+8D:/WORK_SPCAE/QuatusII_Project/CPU16bit/memory_ram.v
+FD:/WORK_SPCAE/QuatusII_Project/CPU16bit/memory_ram.v
+L0 39
+R4
+r1
+!s85 0
+31
+!s108 1715171782.886000
+!s107 D:/WORK_SPCAE/QuatusII_Project/CPU16bit/memory_ram.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/WORK_SPCAE/QuatusII_Project/CPU16bit|D:/WORK_SPCAE/QuatusII_Project/CPU16bit/memory_ram.v|
+!i113 0
+R5
+R6
+vprogramReg
+R2
+!i10b 1
+!s100 M07fkAZ2hCLD<IdfDkAEi0
+I6K46WVg>F;l51:A6N?OTb3
+R3
+R0
+w1710925036
+8D:/WORK_SPCAE/QuatusII_Project/CPU16bit/programReg.v
+FD:/WORK_SPCAE/QuatusII_Project/CPU16bit/programReg.v
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1715171782.785000
+!s107 D:/WORK_SPCAE/QuatusII_Project/CPU16bit/programReg.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/WORK_SPCAE/QuatusII_Project/CPU16bit|D:/WORK_SPCAE/QuatusII_Project/CPU16bit/programReg.v|
+!i113 0
+R5
+R6
+nprogram@reg
+vREG_AR7
+R2
+!i10b 1
+!s100 LnWLNme?_CQTXI[M?93C91
+IUVTJiV@N9QeB0_F48:Z0K1
+R3
+R0
+w1715135858
+8D:/WORK_SPCAE/QuatusII_Project/CPU16bit/REG_AR7.v
+FD:/WORK_SPCAE/QuatusII_Project/CPU16bit/REG_AR7.v
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1715171782.737000
+!s107 D:/WORK_SPCAE/QuatusII_Project/CPU16bit/REG_AR7.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/WORK_SPCAE/QuatusII_Project/CPU16bit|D:/WORK_SPCAE/QuatusII_Project/CPU16bit/REG_AR7.v|
+!i113 0
+R5
+R6
+n@r@e@g_@a@r7
+vshiftReg
+R2
+!i10b 1
+!s100 QL89KAk8<_Mc]<fXX5;BL3
+ILmHJWaO7Ja_8E?zJK65502
+R3
+R0
+w1710925047
+8D:/WORK_SPCAE/QuatusII_Project/CPU16bit/shiftReg.v
+FD:/WORK_SPCAE/QuatusII_Project/CPU16bit/shiftReg.v
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1715171782.692000
+!s107 D:/WORK_SPCAE/QuatusII_Project/CPU16bit/shiftReg.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/WORK_SPCAE/QuatusII_Project/CPU16bit|D:/WORK_SPCAE/QuatusII_Project/CPU16bit/shiftReg.v|
+!i113 0
+R5
+R6
+nshift@reg
+vtb
+R2
+!i10b 1
+!s100 ]8KkfYWz1]6kgKgM;SDCN2
+I4cfIEl5]2<4^c`0WF=[?51
+R3
+R0
+w1715170547
+8D:/WORK_SPCAE/QuatusII_Project/CPU16bit/tb.v
+FD:/WORK_SPCAE/QuatusII_Project/CPU16bit/tb.v
+R8
+R4
+r1
+!s85 0
+31
+!s108 1715171782.425000
+!s107 D:/WORK_SPCAE/QuatusII_Project/CPU16bit/tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/WORK_SPCAE/QuatusII_Project/CPU16bit|D:/WORK_SPCAE/QuatusII_Project/CPU16bit/tb.v|
+!i113 0
+R5
+R6
+vtesttop
+R1
+!i10b 1
+!s100 Wnn5S>bb7IhXD_LmS1]e>3
+IYXZB4G^m=a_C2CGXOk3?o1
+R3
+R0
+w1715166024
+8D:/WORK_SPCAE/QuatusII_Project/CPU16bit/sim/testtop.v
+FD:/WORK_SPCAE/QuatusII_Project/CPU16bit/sim/testtop.v
+L0 2
+R4
+r1
+!s85 0
+31
+!s108 1715171783.197000
+!s107 D:/WORK_SPCAE/QuatusII_Project/CPU16bit/sim/testtop.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/WORK_SPCAE/QuatusII_Project/CPU16bit/sim|D:/WORK_SPCAE/QuatusII_Project/CPU16bit/sim/testtop.v|
+!i113 0
+R5
+!s92 -vlog01compat -work work +incdir+D:/WORK_SPCAE/QuatusII_Project/CPU16bit/sim -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vworkReg
+R2
+!i10b 1
+!s100 h2V?m=^C8TMf;ZZnfHeVV2
+IVo8<8PWm?;Q>nS3mzg`GJ2
+R3
+R0
+w1715135798
+8D:/WORK_SPCAE/QuatusII_Project/CPU16bit/workReg.v
+FD:/WORK_SPCAE/QuatusII_Project/CPU16bit/workReg.v
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1715171782.583000
+!s107 D:/WORK_SPCAE/QuatusII_Project/CPU16bit/workReg.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/WORK_SPCAE/QuatusII_Project/CPU16bit|D:/WORK_SPCAE/QuatusII_Project/CPU16bit/workReg.v|
+!i113 0
+R5
+R6
+nwork@reg

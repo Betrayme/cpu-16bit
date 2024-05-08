@@ -1,0 +1,23 @@
+module clkdiv(
+	input wire clk,
+	input wire rst,
+	inout reg STEP
+);
+//产生的STEP周期为clk的4倍
+reg [1:0]cnt;
+always @ (posedge clk or posedge rst)
+begin
+	if(rst==1'b1)
+		cnt<=2'h0;
+	else
+		cnt<=cnt+2'h1;
+end 
+always @(cnt or rst)
+begin
+	if(rst==1'b1)
+		STEP<=1'b0;
+	else if(cnt==2'h0)
+		STEP<=~STEP;
+end
+endmodule
+

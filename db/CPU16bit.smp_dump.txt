@@ -1,0 +1,31 @@
+
+State Machine - |CPU16bit|Contrlblock:inst|current_state
+Name current_state.ljump6 current_state.ljump5 current_state.ljump4 current_state.ljump3 current_state.ljump2 current_state.ljump1 current_state.ld3 current_state.ld2 current_state.ld1 current_state.adds3 current_state.adds2 current_state.adds1 current_state.incPC3 current_state.incPC2 current_state.incPC1 current_state.execute current_state.reset3 current_state.reset2 current_state.reset1 
+current_state.reset1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+current_state.reset2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+current_state.reset3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+current_state.execute 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+current_state.incPC1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+current_state.incPC2 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+current_state.incPC3 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+current_state.adds1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+current_state.adds2 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+current_state.adds3 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+current_state.ld1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+current_state.ld2 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+current_state.ld3 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.ljump1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.ljump2 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.ljump3 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.ljump4 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.ljump5 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.ljump6 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |CPU16bit|tb:inst4|led_module:led_ct|led_reg
+Name led_reg.1111 led_reg.1100 led_reg.1001 led_reg.0110 led_reg.0011 led_reg.0000 
+led_reg.0000 0 0 0 0 0 0 
+led_reg.0011 0 0 0 0 1 1 
+led_reg.0110 0 0 0 1 0 1 
+led_reg.1001 0 0 1 0 0 1 
+led_reg.1100 0 1 0 0 0 1 
+led_reg.1111 1 0 0 0 0 1 

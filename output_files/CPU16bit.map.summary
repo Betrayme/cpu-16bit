@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed May 08 21:21:38 2024
+Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Full Version
+Revision Name : CPU16bit
+Top-level Entity Name : CPU16bit
+Family : Cyclone IV E
+Total logic elements : 780
+    Total combinational functions : 575
+    Dedicated logic registers : 372
+Total registers : 372
+Total pins : 47
+Total virtual pins : 0
+Total memory bits : 2,048
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

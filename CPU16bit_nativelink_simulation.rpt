@@ -1,0 +1,21 @@
+Info: Start Nativelink Simulation process
+
+========= EDA Simulation Settings =====================
+
+Sim Mode              :  Gate
+Family                :  cycloneive
+Quartus root          :  d:/quatusii/install/quartus/bin64/
+Quartus sim root      :  d:/quatusii/install/quartus/eda/sim_lib
+Simulation Tool       :  modelsim
+Simulation Language   :  verilog
+Simulation Mode       :  GUI
+Sim Output File       :  CPU16bit_8_1200mv_85c_slow.vo
+Sim SDF File       :  CPU16bit_8_1200mv_85c_v_slow.sdo
+Sim dir               :  simulation\modelsim
+
+=======================================================
+
+Info: Starting NativeLink simulation with ModelSim software
+Sourced NativeLink script d:/quatusii/install/quartus/common/tcl/internal/nativelink/modelsim.tcl
+Warning: File CPU16bit_run_msim_gate_verilog.do already exists - backing up current file as CPU16bit_run_msim_gate_verilog.do.bak11
+Info: Spawning ModelSim Simulation software 
