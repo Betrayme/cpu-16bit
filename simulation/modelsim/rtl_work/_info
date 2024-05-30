@@ -1,0 +1,426 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/WORK_SPCAE/QuatusII_Project/cputestv1/simulation/modelsim
+T_opt
+Z1 !s110 1717071136
+V7CPDVhDYolOTb1`@aFQLK2
+04 7 4 work testtop fast 0
+=1-38f3ab9abf4e-66586d20-bd-314c
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.4;61
+vaddrReg
+Z2 !s110 1717071135
+!i10b 1
+!s100 GEeVhIaCD:hKLob:B?D]>0
+I:ViTbWb?ANWVCnd9F`^DA1
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1710674165
+8D:/WORK_SPCAE/QuatusII_Project/cputestv1/addrReg.v
+FD:/WORK_SPCAE/QuatusII_Project/cputestv1/addrReg.v
+L0 1
+Z4 OL;L;10.4;61
+r1
+!s85 0
+31
+!s108 1717071135.659000
+!s107 D:/WORK_SPCAE/QuatusII_Project/cputestv1/addrReg.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/WORK_SPCAE/QuatusII_Project/cputestv1|D:/WORK_SPCAE/QuatusII_Project/cputestv1/addrReg.v|
+!i113 0
+Z5 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z6 !s92 -vlog01compat -work work +incdir+D:/WORK_SPCAE/QuatusII_Project/cputestv1 -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+naddr@reg
+vALU
+R2
+!i10b 1
+!s100 emWQHO@5AOhe=UU8W0E143
+IIj`CJdSgGVZ<L81ioOzB_2
+R3
+R0
+w1710925058
+8D:/WORK_SPCAE/QuatusII_Project/cputestv1/ALU.v
+FD:/WORK_SPCAE/QuatusII_Project/cputestv1/ALU.v
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1717071135.459000
+!s107 D:/WORK_SPCAE/QuatusII_Project/cputestv1/ALU.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/WORK_SPCAE/QuatusII_Project/cputestv1|D:/WORK_SPCAE/QuatusII_Project/cputestv1/ALU.v|
+!i113 0
+R5
+R6
+n@a@l@u
+vbuffer
+R2
+!i10b 1
+!s100 l_eM4FbdfbamW1_XbY<MF0
+IZGJ<[ZR@;IBMAi4EC8CK]2
+R3
+R0
+w1710930432
+8D:/WORK_SPCAE/QuatusII_Project/cputestv1/buffer.v
+FD:/WORK_SPCAE/QuatusII_Project/cputestv1/buffer.v
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1717071135.749000
+!s107 D:/WORK_SPCAE/QuatusII_Project/cputestv1/buffer.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/WORK_SPCAE/QuatusII_Project/cputestv1|D:/WORK_SPCAE/QuatusII_Project/cputestv1/buffer.v|
+!i113 0
+R5
+R6
+vclkdiv
+R2
+!i10b 1
+!s100 eO3cK^:NQ8[gzndAZe<9L0
+I2O?Va6UL9R4ASa?zCohY]0
+R3
+R0
+w1715175481
+8D:/WORK_SPCAE/QuatusII_Project/cputestv1/clkdiv.v
+FD:/WORK_SPCAE/QuatusII_Project/cputestv1/clkdiv.v
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1717071135.899000
+!s107 D:/WORK_SPCAE/QuatusII_Project/cputestv1/clkdiv.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/WORK_SPCAE/QuatusII_Project/cputestv1|D:/WORK_SPCAE/QuatusII_Project/cputestv1/clkdiv.v|
+!i113 0
+R5
+R6
+vclkstep
+R2
+!i10b 1
+!s100 9[ENSNc>X;^AGALU;_ceY1
+IOFUD81?^lG2`Ke85=7Hc<1
+R3
+R0
+w1710933582
+8D:/WORK_SPCAE/QuatusII_Project/cputestv1/clkstep.v
+FD:/WORK_SPCAE/QuatusII_Project/cputestv1/clkstep.v
+Z7 L0 19
+R4
+r1
+!s85 0
+31
+!s108 1717071135.849000
+!s107 D:/WORK_SPCAE/QuatusII_Project/cputestv1/clkstep.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/WORK_SPCAE/QuatusII_Project/cputestv1|D:/WORK_SPCAE/QuatusII_Project/cputestv1/clkstep.v|
+!i113 0
+R5
+R6
+vconnection
+R2
+!i10b 1
+!s100 8@WIjm=KAVgZIKDQ10M:T2
+I;;`g`l1m2m2J5T49Z;7E@2
+R3
+R0
+w1715137733
+8D:/WORK_SPCAE/QuatusII_Project/cputestv1/connection.v
+FD:/WORK_SPCAE/QuatusII_Project/cputestv1/connection.v
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1717071135.949000
+!s107 D:/WORK_SPCAE/QuatusII_Project/cputestv1/connection.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/WORK_SPCAE/QuatusII_Project/cputestv1|D:/WORK_SPCAE/QuatusII_Project/cputestv1/connection.v|
+!i113 0
+R5
+R6
+vContrlblock
+R2
+!i10b 1
+!s100 Y1>d05=j9zkL?9S=7mbf]1
+IfWAoDLn76=:49`zRzW:nO1
+R3
+R0
+w1717070228
+8D:/WORK_SPCAE/QuatusII_Project/cputestv1/Contrlblock.v
+FD:/WORK_SPCAE/QuatusII_Project/cputestv1/Contrlblock.v
+L0 22
+R4
+r1
+!s85 0
+31
+!s108 1717071135.799000
+!s107 D:/WORK_SPCAE/QuatusII_Project/cputestv1/Contrlblock.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/WORK_SPCAE/QuatusII_Project/cputestv1|D:/WORK_SPCAE/QuatusII_Project/cputestv1/Contrlblock.v|
+!i113 0
+R5
+R6
+n@contrlblock
+vCPU16bit
+R2
+!i10b 1
+!s100 _1iiN>DhTUMfBI;[B1]Of3
+IBFOAUmoTzc8PmUJTBn^eP1
+R3
+R0
+w1717068181
+8D:/WORK_SPCAE/QuatusII_Project/cputestv1/CPU16bit.v
+FD:/WORK_SPCAE/QuatusII_Project/cputestv1/CPU16bit.v
+R7
+R4
+r1
+!s85 0
+31
+!s108 1717071135.129000
+!s107 D:/WORK_SPCAE/QuatusII_Project/cputestv1/CPU16bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/WORK_SPCAE/QuatusII_Project/cputestv1|D:/WORK_SPCAE/QuatusII_Project/cputestv1/CPU16bit.v|
+!i113 0
+R5
+R6
+n@c@p@u16bit
+vinstrReg
+R2
+!i10b 1
+!s100 DX6W^`C?[Ecj5m8R^Y;1P0
+I43S0kFS7FQ0X5nXFUG6X<1
+R3
+R0
+w1710808830
+8D:/WORK_SPCAE/QuatusII_Project/cputestv1/instrReg.v
+FD:/WORK_SPCAE/QuatusII_Project/cputestv1/instrReg.v
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1717071135.369000
+!s107 D:/WORK_SPCAE/QuatusII_Project/cputestv1/instrReg.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/WORK_SPCAE/QuatusII_Project/cputestv1|D:/WORK_SPCAE/QuatusII_Project/cputestv1/instrReg.v|
+!i113 0
+R5
+R6
+ninstr@reg
+vled_module
+R2
+!i10b 1
+!s100 aBA7@^4YV`jS;QSha;Jig3
+I3E[TKH[>T1Z5T3P2W]D_f1
+R3
+R0
+w1381149896
+8D:/WORK_SPCAE/QuatusII_Project/cputestv1/led.v
+FD:/WORK_SPCAE/QuatusII_Project/cputestv1/led.v
+Z8 L0 10
+R4
+r1
+!s85 0
+31
+!s108 1717071135.319000
+!s107 D:/WORK_SPCAE/QuatusII_Project/cputestv1/led.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/WORK_SPCAE/QuatusII_Project/cputestv1|D:/WORK_SPCAE/QuatusII_Project/cputestv1/led.v|
+!i113 0
+R5
+R6
+vmemory_ram
+R2
+!i10b 1
+!s100 ^kPV?n>EXChO=bQ33YV5<2
+I4Q`Q[oljINJCF]jE_z`MH1
+R3
+R0
+w1710590356
+8D:/WORK_SPCAE/QuatusII_Project/cputestv1/memory_ram.v
+FD:/WORK_SPCAE/QuatusII_Project/cputestv1/memory_ram.v
+L0 39
+R4
+r1
+!s85 0
+31
+!s108 1717071135.699000
+!s107 D:/WORK_SPCAE/QuatusII_Project/cputestv1/memory_ram.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/WORK_SPCAE/QuatusII_Project/cputestv1|D:/WORK_SPCAE/QuatusII_Project/cputestv1/memory_ram.v|
+!i113 0
+R5
+R6
+vmux_ans
+R2
+!i10b 1
+!s100 7F3^BaBCSjA2K<CKeC[n=1
+IkVaoYcF;Jki0DaIPn>do?1
+R3
+R0
+w1716793881
+8D:/WORK_SPCAE/QuatusII_Project/cputestv1/mux_ans.v
+FD:/WORK_SPCAE/QuatusII_Project/cputestv1/mux_ans.v
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1717071135.229000
+!s107 D:/WORK_SPCAE/QuatusII_Project/cputestv1/mux_ans.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/WORK_SPCAE/QuatusII_Project/cputestv1|D:/WORK_SPCAE/QuatusII_Project/cputestv1/mux_ans.v|
+!i113 0
+R5
+R6
+vmux_div_reg
+R2
+!i10b 1
+!s100 RiU_n_YihFiD11@Y_4oEm3
+ILjHdJoYoj5m=3YB:Mf1mU1
+R3
+R0
+w1717059618
+8D:/WORK_SPCAE/QuatusII_Project/cputestv1/mux_div_reg.v
+FD:/WORK_SPCAE/QuatusII_Project/cputestv1/mux_div_reg.v
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1717071135.179000
+!s107 D:/WORK_SPCAE/QuatusII_Project/cputestv1/mux_div_reg.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/WORK_SPCAE/QuatusII_Project/cputestv1|D:/WORK_SPCAE/QuatusII_Project/cputestv1/mux_div_reg.v|
+!i113 0
+R5
+R6
+vprogramReg
+R2
+!i10b 1
+!s100 M07fkAZ2hCLD<IdfDkAEi0
+I:4aeha7i;gcbR`MLO5ebA3
+R3
+R0
+w1710925036
+8D:/WORK_SPCAE/QuatusII_Project/cputestv1/programReg.v
+FD:/WORK_SPCAE/QuatusII_Project/cputestv1/programReg.v
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1717071135.609000
+!s107 D:/WORK_SPCAE/QuatusII_Project/cputestv1/programReg.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/WORK_SPCAE/QuatusII_Project/cputestv1|D:/WORK_SPCAE/QuatusII_Project/cputestv1/programReg.v|
+!i113 0
+R5
+R6
+nprogram@reg
+vREG_AR7
+R2
+!i10b 1
+!s100 LnWLNme?_CQTXI[M?93C91
+Id9WReB^B24P]<Wjl[k60;2
+R3
+R0
+w1715135858
+8D:/WORK_SPCAE/QuatusII_Project/cputestv1/REG_AR7.v
+FD:/WORK_SPCAE/QuatusII_Project/cputestv1/REG_AR7.v
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1717071135.559000
+!s107 D:/WORK_SPCAE/QuatusII_Project/cputestv1/REG_AR7.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/WORK_SPCAE/QuatusII_Project/cputestv1|D:/WORK_SPCAE/QuatusII_Project/cputestv1/REG_AR7.v|
+!i113 0
+R5
+R6
+n@r@e@g_@a@r7
+vshiftReg
+R2
+!i10b 1
+!s100 QL89KAk8<_Mc]<fXX5;BL3
+I06DY]UgbTfm7<[[SdTG001
+R3
+R0
+w1710925047
+8D:/WORK_SPCAE/QuatusII_Project/cputestv1/shiftReg.v
+FD:/WORK_SPCAE/QuatusII_Project/cputestv1/shiftReg.v
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1717071135.509000
+!s107 D:/WORK_SPCAE/QuatusII_Project/cputestv1/shiftReg.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/WORK_SPCAE/QuatusII_Project/cputestv1|D:/WORK_SPCAE/QuatusII_Project/cputestv1/shiftReg.v|
+!i113 0
+R5
+R6
+nshift@reg
+vtb
+R2
+!i10b 1
+!s100 d7UK22MJlg]P8[kPf2nC21
+I:Gem6ECA>3QM5eSK^__;C0
+R3
+R0
+w1715174047
+8D:/WORK_SPCAE/QuatusII_Project/cputestv1/tb.v
+FD:/WORK_SPCAE/QuatusII_Project/cputestv1/tb.v
+R8
+R4
+r1
+!s85 0
+31
+!s108 1717071135.269000
+!s107 D:/WORK_SPCAE/QuatusII_Project/cputestv1/tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/WORK_SPCAE/QuatusII_Project/cputestv1|D:/WORK_SPCAE/QuatusII_Project/cputestv1/tb.v|
+!i113 0
+R5
+R6
+vtesttop
+R1
+!i10b 1
+!s100 UjE:H97Tgan29=oRH:EQW0
+IY6GY22feG8^MZ12N7O98T1
+R3
+R0
+w1717055645
+8D:/WORK_SPCAE/QuatusII_Project/cputestv1/sim/testtop.v
+FD:/WORK_SPCAE/QuatusII_Project/cputestv1/sim/testtop.v
+L0 2
+R4
+r1
+!s85 0
+31
+!s108 1717071135.999000
+!s107 D:/WORK_SPCAE/QuatusII_Project/cputestv1/sim/testtop.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/WORK_SPCAE/QuatusII_Project/cputestv1/sim|D:/WORK_SPCAE/QuatusII_Project/cputestv1/sim/testtop.v|
+!i113 0
+R5
+!s92 -vlog01compat -work work +incdir+D:/WORK_SPCAE/QuatusII_Project/cputestv1/sim -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vworkReg
+R2
+!i10b 1
+!s100 h2V?m=^C8TMf;ZZnfHeVV2
+IPJK@eQIoem_IBYeLk1Qlb1
+R3
+R0
+w1715135798
+8D:/WORK_SPCAE/QuatusII_Project/cputestv1/workReg.v
+FD:/WORK_SPCAE/QuatusII_Project/cputestv1/workReg.v
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1717071135.409000
+!s107 D:/WORK_SPCAE/QuatusII_Project/cputestv1/workReg.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/WORK_SPCAE/QuatusII_Project/cputestv1|D:/WORK_SPCAE/QuatusII_Project/cputestv1/workReg.v|
+!i113 0
+R5
+R6
+nwork@reg

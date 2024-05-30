@@ -1,0 +1,6 @@
+module testmod(
+	input wire signal,
+	output wire sig_out
+);
+assign sig_out=signal;
+endmodule
