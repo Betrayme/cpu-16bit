@@ -19,3 +19,6 @@
 testbench仿真文件在sim文件夹下，名称为testtop.v  
 testbench波形文件在simulation->modelsim下的wave.do文件
 signalTapII仿真文件在signalTap文件夹下  
+
+# 架构图
+架构图放在了根目录下  名称为v3.jpg  
