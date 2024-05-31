@@ -1,0 +1,33 @@
+module mux_div_reg(
+	input wire [15:0] a,
+	input wire rst,
+	input wire wr,
+	input wire sel,
+	input wire CLK,
+	output reg [15:0] c
+);
+reg [15:0] intereg;
+reg [15:0] reg_0;
+reg [15:0] reg_1;
+
+always @(posedge CLK or posedge rst)
+begin
+	if(rst==1'b1)
+		intereg<=16'h0;
+	else
+	begin
+		if(wr==1'b1)
+			intereg<=a;
+		if(sel==1'b0)begin
+			reg_0<=intereg;
+			c<=reg_0;
+		end
+		else
+		begin
+			reg_1<=intereg;
+			c<=reg_1;
+		end
+	end
+end
+
+endmodule
